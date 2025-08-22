@@ -11,7 +11,7 @@ The workshop offers a full-pipeline understanding of the semiconductor packaging
  |[**Mod. 2**](#2---from-wafer-to-package-assembly-and-manufacturing-essentials) | **From Wafer to Package: Assembly and Manufacturing Essentials** <br> <ol> <li>[Setting The Stage - Supply Chain And Facilities](#21---setting-the-stage---supply-chain-and-facilities)</li> <li>[Wafer Pre-Preparation - Grinding And Dicing](#22---wafer-pre-preparation---grinding-and-dicing)</li><li>[Wire Bond Packaging - Die Attach To Molding](#23---wire-bond-packaging---die-attach-to-molding)</li> <li>[Flip Chip Assembly - Bump Formation And Underfill](#24---flip-chip-assembly---bump-formation-and-underfill)</li> <li>[Wafer Level Packaging And Conclusion](#25---wafer-level-packaging-and-conclusion)</li> </ol> | ![](https://progress-bar.xyz/100/?title=DONE) |
  |[**Mod. 3**](#3---labs-thermal-simulation-of-semiconductor-packages-with-ansys) | **Labs: Thermal Simulation of Semiconductor Packages with ANSYS** <br> <ol> <li>[Introduction And Getting Started With ANSYS Electronics Desktop](#31---introduction-and-getting-started-with-ansys-electronics-desktop)</li> <li>[Setting Up A Flip-Chip BGA Package](#32---setting-up-a-flip-chip-bga-package)</li> <li>[Material Definitions And Thermal Power Sources](#33---material-definitions-and-thermal-power-sources)</li> <li>[Meshing And Running The Thermal Analysis](#34---meshing-and-running-the-thermal-analysis)</li> <li>[Viewing Results And Exploring Other Package Types](#35---viewing-results-and-exploring-other-package-types)</li> </ol> | ![](https://progress-bar.xyz/100/?title=DONE) |
  |[**Mod. 4**](#4---ensuring-package-reliability-testing-and-performance-validation) | **Ensuring Package Reliability: Testing and Performance Validation** <br> <ol> <li>[Introduction to Package Testing and Electrical Functionality Checks](#41---introduction-to-package-testing-and-electrical-functionality-checks)</li> <li>[Reliability and Performance Testing of Semiconductor Packages](#42---reliability-and-performance-testing-of-semiconductor-pack--ages)</li> </ol> |  ![](https://progress-bar.xyz/100/?title=DONE) |
- |[**Mod. 5**](#5---package-design-and-modeling-building-a-semiconductor-package-from-scratch) | **Package Design and Modeling: Building a Semiconductor Package from Scratch** <br> <ol> <li>[Introduction to Package Cross-Section Modeling in ANSYS Electronics Desktop (AEDT)](#51---introduction-to-package-cross-section-modeling-in-ansys-electronics-desktop-aedt)</li> <li>[Creating the Die and Substrate in AEDT](#52---creating-the-die-and-substrate-in-aedt)</li> <li>[Adding Die Attach Material and Bond Pads](#53---adding-die-attach-material-and-bond-pads)</li> <li>[Wire Bond Creation and Material Assignment](#54---wire-bond-creation-and-material-assignment)</li> <li>[Applying Mold Compound and Finalizing the Package Model](#55---applying-mold-compound-and-finalizing-the-package-model)</li> </ol> | ![](https://progress-bar.xyz/20/?title=IN-PROGRESS) |
+ |[**Mod. 5**](#5---package-design-and-modeling-building-a-semiconductor-package-from-scratch) | **Package Design and Modeling: Building a Semiconductor Package from Scratch** <br> <ol> <li>[Introduction to Package Cross-Section Modeling in ANSYS Electronics Desktop (AEDT)](#51---introduction-to-package-cross-section-modeling-in-ansys-electronics-desktop-aedt)</li> <li>[Creating the Die and Substrate in AEDT](#52---creating-the-die-and-substrate-in-aedt)</li> <li>[Adding Die Attach Material and Bond Pads](#53---adding-die-attach-material-and-bond-pads)</li> <li>[Wire Bond Creation and Material Assignment](#54---wire-bond-creation-and-material-assignment)</li> <li>[Applying Mold Compound and Finalizing the Package Model](#55---applying-mold-compound-and-finalizing-the-package-model)</li> </ol> | ![](https://progress-bar.xyz/100/?title=DONE) |
 ## 1 - Packaging Evolution: From Basics to 3D Integration
 Semiconductor packaging is a process of enclosing a fabricated semiconductor chip(die) in a protective case that:
 1. Protect it from the physical damage.
@@ -409,9 +409,332 @@ Flip chip packaging enhances electrical performance and I/O density by mounting 
 
 9. **Ball Mounting and Reflow**: Solder balls are mounted on the substrate. A final reflow process ensures firm attachment of solder balls.
 
+###2.5 - Wafer Level Packaging And Conclusion
+
+Wafer-Level Packaging (WLP) is a technique where the entire packaging process is done at the wafer level, before dicing and offers smaller size, and lower cost.  
+There are two main types of WLP:
+  - Fan-in WLP (FI-WLP) : I/O pads are redistributed within the die area to match the solder bumps.
+  - Fan-out WLP (FO-WLP) : Uses RDLs to extend the I/O pads beyond the die area, enabling higher I/O density.
+
+**<U>FO-WLP Process</U>**
+
+1. **Reconstitution Process:**
+1.1 Diced Wafer is taken <br>
+1.2 From this, only the known-good dies are picked and placed onto a temporary carrier. <br>
+1.3 Molding to form a single reconstituted wafer after releasing the carrier. <br>
+
+2. **RDL (Redistribution Layer) Preparation**:
+2.1 Dielectric & Metal are layers are deposited on to the reconstituted wafer and patterned. <br>
+2.2 Multiple such RDL layers are patterned to form the final RDL, similar to the metallization stages in FEOL/ CMOS facbrication <br>
+
+3. **Solder Ball Attach**: Solder Balls are mounted on the final RDL pads to enable surface mounting. <br>
+
+4. **Final Laser Marking and Singulation**: Each packaged die is marked and the reconstituted wafer is diced (singulated) into individual packages.
+
+_________________________________________________________________________________________________________  
+
+## 3 - Labs: Thermal Simulation of Semiconductor Packages with ANSYS tools
+
+### 3.1 - Introduction And Getting Started With ANSYS Electronics Desktop
+
+ANSYS Electronics Desktop (AEDT) is a multi-physics simulation software that combines Electromagnetic, Signal Integrity, Thermal and Electro-Mechanical simulation tools in a single integrated platform. It is widely used for designing and analyzing high-speed electronic circuits and systems.
+
+### 3.2 - Setting Up A Flip-Chip BGA Package
+
+We will be taking an already available FC-BGA package within the Icepak Toolkit for this simulation exercise.
+
+
+  - **Step 1 : Open AEDT and launch Icepak**
+
+
+
+  - **Step 2.1 : Create a Flipchip BGA Package**
+    - `Icepak -> Toolkit -> Geometry -> Packages -> Flipchip_BGA`
 
 
 
 
+  - **Step 2.2 : The Package Configuration window opens up**
+    - The dimensions and other aspects of the package, substrate, die, die underfill and the solder balls can be configured here.
+    - Once configured, click OK to generate the package model.
 
+
+ - **Step 3 : Explore the 3D Package Model Structure in Icepak**
+
+
+### 3.3 - Material Definitions And Thermal Power Sources
+
+  - **Step 4 : Review and modify the material and definition types for the different components of the model.**
+
+| Material Definitions <br> 
+
+
+
+  - **Step 5.1 : Add/ Assign Source Thermal Model for Die**
+    - In "Project Manager" sub-window, expand Thermal section and open the **_BGA1_die_source_** and configure the thermal condition
+
+
+
+- **Step 5.2 : Add/ Assign Source Thermal Model for Substrate**
+    - To add a thermal boundary condition for the substrate, right click on **_Flipchip_BGA1_substrate_** under `Models -> Flipchip_BGA1_Group -> Solids` and assign a Thermal Source.
+    - Set the thermal condition on the substrate to Fixed Temperatue and the temperature as Ambient.
+
+
+  - **Step 6 : Add Thermal monitors for the different components**
+    - To add a Thermal monitor to the substrate, right click on the **_Flipchip_BGA1_substrate_** under `Models -> Flipchip_BGA1_Group -> Solids` and then choose `Assign Monitor -> Point...`
+    - In the sub-window that appears, select **Temperature**
+    - Repeat the same to add thermal monitors for the die and the die-underfill.
+      | Add Thermal monitor for Substrate <br>
+
+
+
+      ### 3.4 - Meshing And Running The Thermal Analysis
+
+  - **Step 7.1 : Generate Mesh**
+    - Go to the Simulation tab and click on `Generate Mesh`
+    - Save the project if prompted and wait for the mesh generation to get completed.
+    - Take a note of any error(s) and warning(s) that are shown and ignore/ take steps to debug & fix the issue(s) as required.
+
+  - **Step 7.2 : Review Mesh Quality metrics**
+    - Once the mesh is generated, review the quality metrics of the generated mesh such as Face Alignment, Skewness and Volume.
+
+- **Step 8 : Add Thermal Analysis**
+    - Under `Project Manager`, right click on `Analysis and then, select Add Analysis Setup` and configure the solver settings as required. (We will choose all default settings for our analysis)
+
+ ### 3.5 - Viewing Results And Exploring Other Package Types
+
+  - **Step 9 : Now, Validate the Simulation setup**
+    - Click on the **Validate** button in the top ribbon
+    - Ensure all checks are validated successfully
+
+
+  - **Step 10: Run the simulation and plot the temperature map**
+    - Click on **Analyze All** button in the top ribbon
+    - Wait for the simulation to get completed successfully. Take note of any warning(s) or errors that may need further debug or setup modification(s).
+    - Once the simulation is completed, select the complete FC-BGA package in the 3D view by drawing a selection rectangle using the left-mouse button.
+    - Right click and then select `Plot Fields -> Temperature -> Temperature`
+    - Configure the different plot options:
+      - Specify Name, Folder
+      - Plot on Surface only
+      - Surface Smoothing -> Enable Gaussian Smoothing
+
+_________________________________________________________________________________________________________  
+
+## 4 - Ensuring Package Reliability: Testing and Performance Validation
+
+### 4.1 - Introduction to Package Testing and Electrical Functionality Checks
+
+In semiconductor packaging, reliability isn't just a goal—it's a necessity.ICs are tested at multiple points during the manufacturing process to ensure they meet performance, reliability, and functionality requirements. Testing takes place both at the foundry and at OSAT facilities.This phase involves rigorous procedures such as thermal cycling, drop tests, electrical continuity checks, and accelerated aging simulations. By identifying potential failure modes early, engineers can refine materials, design, and assembly processes to deliver robust, high-performance packages that meet industry standards and customer expectations.
+
+#### 4.1.1 - Foundry Testing Stages
+Foundry testing is a critical part of semiconductor fabrication, ensuring that wafers and individual dies meet stringent quality and performance standards before packaging and deployment. Here's a breakdown of the key stages:
+**1. Front-End Manufacturing**
+  - Involves fabrication of integrated circuits on silicon wafers.
+  - Leads to fine tuning of the Process parameters to improve yield, reduce IDDQ/ leakage and improve speed/ performance.
+
+**2. Wafer Probe Test**
+  - Wafer is mounted on a probe station and a probe card with makes contact with the bond pads or bump pads of each die.
+  - An ATE can now send test patterns to mark the die as good or bad.
+
+#### 4.1.2 - OSAT Testing Stages
+**1. Wafer Sorting**
+  - Dies are sorted based on probe test results.
+  - Only functional dies proceed to packaging.
+
+**2. Package Manufacturing**
+  - Functional dies are packaged
+
+**3. Package Testing**
+  - Conducted in ISO Class 6/7 cleanroom zones
+  - Testing includes:
+    - AOST (Assembly Open and Short Test): Shorts/ Opens in Packages
+    - Burn-in Test: Elevated temperature and voltage and power cycling are applied to accelerate ageing to catch early failures.
+    - Final Test: Validate the electrical performance of the packaged IC across temperature and voltage corners and ensure it meets the datasheet specifications.
+
+**4. System Level Testing (SLT)**
+  - Testing is performed in conditions that closely mimic real-world system operation. SLT verifies how a chip behaves when it runs actual software or firmware inside a system-like environment.
+
+### 4.2 - Reliability and Performance Testing of Semiconductor Packages
+
+#### 4.2.1 Burn-in and Final Test
+
+**1. Burn-In Test**
+
+  Burn-in testing is a reliability screening process used in semiconductor manufacturing to identify early-life failures in integrated circuits. By subjecting devices to elevated temperatures and voltages for extended periods, this test accelerates aging and stress conditions that mimic real-world usage. The goal is to ensure only robust, defect-free chips move forward in the production pipeline, enhancing long-term performance and reducing field failures.
+  - Burn-in testing is a reliability screening process where semiconductor devices are exposed to elevated temperatures, voltages, and operating conditions for an extended period to accelerate aging and failure mechanisms.
+  - It is used to identify and eliminate early-life failures (also called "infant mortality") in ICs before they are shipped to end users.
+
+**2. Final Test (FT)**
+
+   Its purpose is to verify that each integrated circuit (IC) meets all functional and performance specifications before shipment
+  - Final Test is the last major electrical test phase after the semiconductor die has been packaged.
+  - It verifies that the packaged device meets all functional, parametric, and performance specifications before it is shipped to customers.
+  - It is typically performed by OSATs (Outsourced Semiconductor Assembly and Test providers) or in-house test facilities.
+
+**Summary: ATE & Test Categories**
+### 📊 Summary: ATE & Test Categories
+
+| **Test Category**       | **Purpose**                                              | **ATE Role**                                               | **Stage**             |
+|-------------------------|----------------------------------------------------------|-------------------------------------------------------------|-----------------------|
+| Wafer Sort              | Identifies functional dies on wafer                      | Uses probe cards to test each die                           | Pre-packaging         |
+| Parametric Test         | Measures electrical parameters (e.g., voltage, current)  | Precision instruments integrated into ATE                   | Wafer & Final Test    |
+| Burn-In Test            | Accelerates aging to catch early failures                | Applies elevated voltage and temperature                    | Mid-stage             |
+| Functional Test         | Verifies logical and operational correctness             | Executes test patterns and compares outputs                 | Final Test            |
+| Speed Binning           | Classifies chips by performance                          | Measures timing and speed under load                        | Final Test            |
+| Environmental Screening | Simulates real-world stress conditions                   | Controls temperature, vibration, humidity                   | Final Test            |
+| ESD & Latch-Up Test     | Ensures robustness against electrostatic discharge       | Applies controlled ESD pulses and monitors response         | Reliability Testing   |
+| Failure Analysis        | Diagnoses root causes of defects                         | Interfaces with diagnostic tools (e.g., SEM, X-ray)         | Post-test investigation |
+
+
+## 5 - Package Design and Modeling: Building a Semiconductor Package from Scratch
+
+This is a hands-on lab to design a semiconductor wire bond package from scratch using Ansys Electronics Desktop (AEDT). 
+
+### 5.1 - Introduction to Package Cross-Section Modeling in ANSYS Electronics Desktop (AEDT)
+
+The main focus of this lab exercise is to build the complete cross-section of a wire bond package, including die, substrate, bonding wires, and mold compound, rather than performing any simulation or analyses.
+
+## 🧱 Package Design and Modeling: Building a Semiconductor Package from Scratch
+
+Designing a semiconductor package from the ground up involves a multi-disciplinary approach that integrates electrical, thermal, and mechanical considerations. The process typically includes:
+
+| **Stage**                  | **Description**                                                                 |
+|---------------------------|---------------------------------------------------------------------------------|
+| Requirements Definition   | Define electrical, thermal, and mechanical specs based on chip and system needs. |
+| Substrate Design          | Design the interposer or substrate layout including layer stack-up and routing. |
+| Die Placement             | Position the silicon die(s) on the substrate for optimal signal and thermal flow. |
+| Interconnect Modeling     | Choose and model interconnects (wire bonds, flip-chip bumps, TSVs, etc.).       |
+| Thermal Simulation        | Use tools like ANSYS Icepak to simulate heat dissipation and optimize cooling.  |
+| Mechanical Analysis       | Evaluate stress, warpage, and reliability under environmental conditions.       |
+| Signal Integrity Modeling | Simulate high-speed signal paths to minimize noise and crosstalk.               |
+| Final 3D Package Model    | Generate a complete 3D model for manufacturing and validation.                   |
+
+This modeling phase ensures the package meets performance, reliability, and manufacturability standards before physical prototyping begins.
+
+
+**<U>Package Specifications:</U>**
+
+| Component | Properties |
+|:---|:---|
+| 1. Die | <ul> <li>Material : Silicon</li> <li>Dimensions : 3mm x 3mm</li> <li>Die Height : 200 micron</li> </ul> |
+| 2. Substrate | <ul> <li>Material : FR4</li> <li>Dimensions : 5mm x 5mm</li> <li>Height : 500 micron</li> </ul> |
+| 3. Die Attach | <ul> <li>Material : Modified Epoxy</li> <li>Dimensions : 3mm x 3mm</li> <li>Thickness : 100 micron</li> </ul> |
+| 4. Die Bond Pads | <ul> <li>Material : Copper</li> <li>Dimensions : 0.2mm x 0.2mm</li> <li>Thickness : 5 micron</li> </ul> |
+| 5. Substrate Bond Pads | <ul> <li>Material : Copper</li> <li>Dimensions : 0.2mm x 0.2mm</li> <li>Thickness : 10 micron</li> </ul> |
+| 6. Bond Wire | <ul> <li>Material : Gold wire</li> <li>Type: JEDEC 4-point</li> </ul> |
+| 7. Mold Compound | <ul> <li>Material : Epoxy</li> <li>Thickness : 1.2mm</li> </ul> |
+
+  - **Step 1 : Launch AEDT and select Q3D (or Icepak, Maxwell 3D)**
+
+## 🚀 Launching AEDT and Selecting Simulation Modules
+
+| **Step** | **Action**                                      | **Description**                                                                 |
+|----------|--------------------------------------------------|----------------------------------------------------------------------------------|
+| 1        | Open ANSYS Electronics Desktop (AEDT)            | Start the AEDT application from your desktop or start menu.                      |
+| 2        | Create a New Project                             | Go to `File → New → Project` to begin a fresh simulation setup.                 |
+| 3        | Select Desired Module                            | Choose from available solvers:                                                  |
+|          |                                                  | - **Q3D Extractor**: For parasitic extraction and signal integrity analysis.     |
+|          |                                                  | - **Icepak**: For thermal simulation of electronic packages.                     |
+|          |                                                  | - **Maxwell 3D**: For electromagnetic field simulation in 3D structures.         |
+| 4        | Configure Units and Environment                  | Set working units (e.g., mm, µm) via
+
+### 5.2 - Creating the Die and Substrate in AEDT
+
+  - **Step 2 : Define the working unit**
+    - `Modeler -> Units...`
+    - Choose **mm** or **um** as the working unit for creating the model.
+
+### 🧩 5.2 - Creating the Die and Substrate in AEDT
+
+| **Step** | **Action**                            | **Description**                                                                 |
+|----------|----------------------------------------|----------------------------------------------------------------------------------|
+| 1        | Launch AEDT                            | Open ANSYS Electronics Desktop and start a new project.                          |
+| 2        | Select Simulation Module               | Choose Icepak, Q3D, or Maxwell 3D depending on the analysis type.                |
+| 3        | Set Units                              | Go to `Modeler → Units` and select appropriate units (e.g., mm, µm).             |
+| 4        | Create Substrate Geometry              | Use `Draw → Box` or `Draw → Rectangle` to define the substrate dimensions.       |
+| 5        | Assign Material to Substrate           | Apply materials like FR4, ceramic, or custom definitions via the material library.|
+| 6        | Create Die Geometry                    | Draw a smaller box on top of the substrate to represent the silicon die.         |
+| 7        | Define Die Material                    | Assign silicon or other semiconductor material to the die.                       |
+| 8        | Position Die on Substrate              | Use alignment tools to place the die accurately on the substrate surface.        |
+| 9        | Save and Prepare for Meshing           | Save the model and proceed to mesh setup for simulation.                         |
+
+
+  - **Step 3.1 : Create the Die Geometry**
+    - Select the rectangle tool from the ribbon or using the Menus (`Draw -> Rectangle`) to draw a rectangle
+    - Now, double click on **CreateRectangle** `Model -> Rectangle1` to open up its Properties Dialog box.
+    - Specify the position with one corner at the origin (0, 0, 0) and the dimensions as 3mm x 3mm
+    - Select `Model -> Rectangle1` and from the menu bar: `Modeler -> Surface -> Thicken Sheet...` and set the thickness to 200 microns (0.2mm)
+
+  - **Step 3.2 : Assign Material Properties**
+    - Open up the Properties Dialog box either by double clicking on `Model -> Rectangle1`
+    - Rename the geometry to **Die**
+    - Choose **Silicon** as the material from the Material Library.
+
+
+  - **Step 4.1 : Create the Substrate Geometry**
+    - Draw another rectangle for the substrate (5mm x 5mm) and position (-1, -1, 0) it such that the die is at the center.
+    - Set the thickness as -500 microns (-0.5mm). Note the negative sign so as to have the substrate lie beneath the die.
+    - Adjust the substrate position along Z-axis to account for the die attach thickness. **Adjusted position: (-1, -1, -0.1)**
+
+### 5.3 - Adding Die Attach Material and Bond Pads
+
+  - **Step 5 : Create the Die Attach Material**
+    - Draw a rectangle of the same size as that of the die (3mm x 3mm) and at the same co-ordinates (0, 0, 0).
+    - Set the thickness to -100 microns (-0.1mm) as the DAM lies beneath the die and the substrate
+    - Assign the material to _**Modified Eopxy**_
+    - **NOTE:** Assign different shades/ colours to adjacent components to easily discern in 3D view.
+
+  - **Step 6 : Create Bond pads on Die and Substrate**
+  - Draw a small rectangle and configure its size to to that of the die pad (0.2mm x 0.2mm). We will place the first Die Pad at the co-ordinates (0.2, 0.2, 0.2) so that it sits on top of the die and is at one of the edges.
+  - Set the thickness to 5 microns (0.005mm)
+  - Similarly, draw a small rectangle and configure its size to to that of the substrate bond pad (0.2mm x 0.2mm).
+  - We will place this Substrate Bind Pad at the co-ordinates (0.2, -0.7, -0.1) so that it sits aligned to the Die bond pad created in the previous step, and also on top of the substrate.
+  - Set the substrate bond pad thickness to 10 microns (0.010mm)
+
+### 5.4 - Wire Bond Creation and Material Assignment
+
+  - **Step 7 : Create Bond Wires**
+    - Use the **Bondwire tool** under: `Draw -> Bondwire`
+    - Connect the centre of the Die Bond pad to the centre of the Substrate Bond Pad. It might be easier to draw the wires from the Top view orientation.
+    - Select the Bondwire type as JEDEC 4-point
+    - Assign gold as the Bondwire material
+
+| **Draw the Bondwire connecting the die & substrate pad centers** <br>
+### 🧵 Drawing the Bondwire: Connecting Die & Substrate Pad Centers
+
+| **Step** | **Action**                                | **Description**                                                                 |
+|----------|--------------------------------------------|----------------------------------------------------------------------------------|
+| 1        | Open AEDT and Load Your Project            | Launch AEDT and open the project containing your die and substrate geometry.     |
+| 2        | Switch to 3D Modeler                       | Ensure you're in the 3D Modeler environment to access wire drawing tools.        |
+| 3        | Identify Pad Centers                       | Use the coordinate system or snapping tools to locate the center of each pad.    |
+| 4        | Select “Draw → Bondwire” Tool              | Activate the bondwire drawing tool from the toolbar or menu.                     |
+| 5        | Define Start and End Points                | Click on the die pad center, then the substrate pad center to define the wire path.|
+| 6        | Set Wire Properties                        | Specify wire material (e.g., gold, aluminum), diameter, and loop height.         |
+| 7        | Adjust Loop Profile                        | Modify the wire loop shape for mechanical clearance and signal
+
+Now, repeat the steps 6 and 7 to create and connect all the die and substrate bond pads using bondwires.
+
+### 5.5 - Applying Mold Compound and Finalizing the Package Model
+
+  - **Step 8 : Build the mold compound around the die**
+    - Create a rectangular enclosure around the die and wires (5mm x 5mm, 1.2mm thickness)
+    - Position at (-1, -1, -0.1) covering the top side of the substrate.
+    - Set the thickness to 1.2mm so that it covers the die and the bondwires, while also leaving margin for any laser marking processes
+
+### 🧪 Applying Mold Compound and Finalizing the Package Model
+
+| **Step** | **Action**                          | **Description**                                                                 |
+|----------|--------------------------------------|----------------------------------------------------------------------------------|
+| 1        | Prepare Mold Setup                   | Align the wire-bonded die and substrate within the mold cavity.                  |
+| 2        | Inject Mold Compound                 | Use transfer molding to inject epoxy-based resin over the die and wires.         |
+| 3        | Ensure Uniform Coverage              | Verify that the compound flows evenly to encapsulate all components.             |
+| 4        | Cure the Mold Compound               | Apply heat to solidify the resin, forming a protective shell around the package. |
+| 5        | Inspect for Voids or Cracks          | Perform visual or X-ray inspection to detect molding defects.                    |
+| 6        | Laser Marking                        | Engrave identification codes, logos, or batch numbers on the molded surface.     |
+| 7        | Singulation                          | Cut the molded wafer into individual packages using a precision dicing blade.    |
+| 8        | Final Electrical Test                | Conduct post-mold testing to ensure package integrity and performance.           |
+| 9        | Ready for Shipment                   | Package units are now ready for final inspection
+
+
+_________________________________________________________________________________________________________ 
 
