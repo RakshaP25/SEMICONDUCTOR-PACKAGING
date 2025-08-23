@@ -483,20 +483,60 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
 
   - **Step 1 : Open AEDT and launch Icepak**
 
+| ![AEDT_IcePak_1](./docs/images/M3-LAB-1.png) |
+|:---|
 
 
   - **Step 2.1 : Create a Flipchip BGA Package**
     - `Icepak -> Toolkit -> Geometry -> Packages -> Flipchip_BGA`
 
-
+| ![AEDT_IcePak_2](./docs/images/M3-LAB-2.png) |
+|:---|
 
 
   - **Step 2.2 : The Package Configuration window opens up**
     - The dimensions and other aspects of the package, substrate, die, die underfill and the solder balls can be configured here.
     - Once configured, click OK to generate the package model.
+ | ![AEDT_IcePak_3](./docs/images/M3-LAB-3.png) |    
+|:---|
+
+| ![AEDT_IcePak_4](./docs/images/M3-LAB-4.png) |
+|:---|
+
+| ![AEDT_IcePak_5](./docs/images/M3-LAB-5.png) |
+|:---|
+
+| ![AEDT_IcePak_6](./docs/images/M3-LAB-6.png) |
+|:---|
+
+| Package generated in Icepak <br> 
+ 
+|![AEDT_IcePak_7](./docs/images/M3-LAB-7.png) |
+|:---|
+
 
 
  - **Step 3 : Explore the 3D Package Model Structure in Icepak**
+
+| **Ball Group** <br> 
+
+|![AEDT_IcePak_8](./docs/images/M3-LAB-8.png) |
+|:---|
+
+|**Substrate** <br>
+
+|![AEDT_IcePak_9](./docs/images/M3-LAB-9.png) |
+|:---|
+
+| **Die Underfill** <br>
+
+|![AEDT_IcePak_10](./docs/images/M3-LAB-10.png) |
+|:---|
+
+| **Die** <br>
+
+|![AEDT_IcePak_11](./docs/images/M3-LAB-11.png) |
+|:---|
 
 
 ### 3.3 - Material Definitions And Thermal Power Sources
@@ -505,12 +545,16 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
 
 | Material Definitions <br> 
 
+|![AEDT_IcePak_12](./docs/images/M3-LAB-12.png) |
+|:---|
+
 
 
   - **Step 5.1 : Add/ Assign Source Thermal Model for Die**
     - In "Project Manager" sub-window, expand Thermal section and open the **_BGA1_die_source_** and configure the thermal condition
-
-
+| Source Thermal Model for Die <br> 
+|![AEDT_IcePak_13](./docs/images/M3-LAB-13.png) |
+|:---|
 
 - **Step 5.2 : Add/ Assign Source Thermal Model for Substrate**
     - To add a thermal boundary condition for the substrate, right click on **_Flipchip_BGA1_substrate_** under `Models -> Flipchip_BGA1_Group -> Solids` and assign a Thermal Source.
