@@ -728,6 +728,9 @@ This is a hands-on lab to design a semiconductor wire bond package from scratch 
 
 The main focus of this lab exercise is to build the complete cross-section of a wire bond package, including die, substrate, bonding wires, and mold compound, rather than performing any simulation or analyses.
 
+|![AEDT_IcePak_32](./docs/images/M5-L5-1.png) |
+|:---|
+
 ## 🧱 Package Design and Modeling: Building a Semiconductor Package from Scratch
 
 Designing a semiconductor package from the ground up involves a multi-disciplinary approach that integrates electrical, thermal, and mechanical considerations. The process typically includes:
@@ -772,6 +775,8 @@ This modeling phase ensures the package meets performance, reliability, and manu
 |          |                                                  | - **Maxwell 3D**: For electromagnetic field simulation in 3D structures.         |
 | 4        | Configure Units and Environment                  | Set working units (e.g., mm, µm) via
 
+| ![AEDT_IcePak_1](./docs/images/M5-LAB-1.png) |
+|:---|
 ### 5.2 - Creating the Die and Substrate in AEDT
 
   - **Step 2 : Define the working unit**
@@ -792,7 +797,8 @@ This modeling phase ensures the package meets performance, reliability, and manu
 | 8        | Position Die on Substrate              | Use alignment tools to place the die accurately on the substrate surface.        |
 | 9        | Save and Prepare for Meshing           | Save the model and proceed to mesh setup for simulation.                         |
 
-
+| ![AEDT_IcePak_1](./docs/images/M5-LAB-2.png) |
+|:---|
   - **Step 3.1 : Create the Die Geometry**
     - Select the rectangle tool from the ribbon or using the Menus (`Draw -> Rectangle`) to draw a rectangle
     - Now, double click on **CreateRectangle** `Model -> Rectangle1` to open up its Properties Dialog box.
@@ -804,7 +810,8 @@ This modeling phase ensures the package meets performance, reliability, and manu
     - Rename the geometry to **Die**
     - Choose **Silicon** as the material from the Material Library.
 
-
+| ![AEDT_IcePak_1](./docs/images/M5-LAB-3.png) |
+|:---|
   - **Step 4.1 : Create the Substrate Geometry**
     - Draw another rectangle for the substrate (5mm x 5mm) and position (-1, -1, 0) it such that the die is at the center.
     - Set the thickness as -500 microns (-0.5mm). Note the negative sign so as to have the substrate lie beneath the die.
@@ -833,7 +840,9 @@ This modeling phase ensures the package meets performance, reliability, and manu
     - Select the Bondwire type as JEDEC 4-point
     - Assign gold as the Bondwire material
 
-| **Draw the Bondwire connecting the die & substrate pad centers** <br>
+| **Draw the Bondwire connecting the die & substrate pad centers** <br>![AEDT_IcePak_1](./docs/images/M5-LAB-4.png) |
+|:---|
+
 ### 🧵 Drawing the Bondwire: Connecting Die & Substrate Pad Centers
 
 | **Step** | **Action**                                | **Description**                                                                 |
@@ -848,6 +857,8 @@ This modeling phase ensures the package meets performance, reliability, and manu
 
 Now, repeat the steps 6 and 7 to create and connect all the die and substrate bond pads using bondwires.
 
+| ![AEDT_IcePak_1](./docs/images/M5-LAB-5.png) |
+|:---|
 ### 5.5 - Applying Mold Compound and Finalizing the Package Model
 
   - **Step 8 : Build the mold compound around the die**
@@ -869,6 +880,8 @@ Now, repeat the steps 6 and 7 to create and connect all the die and substrate bo
 | 8        | Final Electrical Test                | Conduct post-mold testing to ensure package integrity and performance.           |
 | 9        | Ready for Shipment                   | Package units are now ready for final inspection
 
-
-_________________________________________________________________________________________________________ 
+| ![AEDT_IcePak_1](./docs/images/M5-LAB-6.png) |
+|:---|
+______________________________________________________________________________________________________________
+  _________________________________________________________________________________________________________ 
 
