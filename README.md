@@ -245,6 +245,9 @@ Depending on the medium of the package, packages can be further categorized into
 
 🔁 **RDLs (Redistribution Layers)**
 Definition: Metal layers added to reroute I/O pads of a die to new locations.RDL (Redistribution Layer) is a metal layer added on top of a die or wafer to reroute the I/O pads to new locations. This enables more flexible bump layouts, especially important for fan-out packages or wafer-level chip scale packaging (WLCSP).
+| ![Package_Interposers_RDLs](./docs/images/M1-L1-6.png) |
+|:---|
+
 
 Application: Used in Fan-Out Wafer-Level Packaging (FOWLP) and 3D stacking to connect dies efficiently.
     - Fan-out wafer-level packaging (FO-WLP, FO-BGA)
@@ -284,6 +287,9 @@ An interposer is a passive or active layer inserted between the die and the subs
 
 ### 1.5 - Comparative Analysis And Selecting The Right Packaging Solution
 The following table provides a comparison of the various IC package types and their typical applications:
+| ![Packages_Comparison](./docs/images/M1-L1-7.png) |
+|:---|
+
 ## 📦 IC Package Types and Applications
 
 | Package Type | Full Name                      | Mounting Style     | Typical Applications                                      |
@@ -334,9 +340,16 @@ The semiconductor supply chain is a multi-step process that transforms raw silic
 | **4. Board Assembly & Test : Multiple packaged ICs are mounted and board-level validation** <br> <ul> <li>**Input**: Packaged ICs, test programs, ATE systems</li> **Output**: Qualified ICs, binned by performance. Yield improvement and binning are critical for profitability.</li> <li> Examples: ASE, Powertech, Amkor, UTAC</li> </ul> |
 | **5. System Integration & Distribution** <br> <ul> <li>**Input**: Packaged, tested ICs; PCBs; passive components </li> <li> **Process**: SMT assembly, system-level integration, validation </li> <li>**Output**: Complete electronic systems (e.g., smartphones, servers) </li> <li>Examples: OEMs Original Equipment Manufacturer (Apple, Cisco), ODMs Original Design Manufacturer (Foxconn, Pegatron), EMS Electronics Manufacturing Services (Flex, Jabil)</li> </ul> |
 
+| ![Semiconductor_Supply_Chain](./docs/images/M2-L2-1.png) |
+|:---|
+
 #### 2.1.2 - Introduction to a Package Manufacturing Unit (ATMP)
 The ATMP process involves four core activities: Assembly, Testing, Marking, and Packaging.
 The ATMPs could be OSATs (like ASE, Amkor, TATA etc.) or in-house ATMPs of IDMs (like Intel, Samsung, Micron) or Foundries (like TSMC, Samsung Foundry)
+
+| **Typical layout of an ATMP:** <br> ![Typical_ATMP_Layout](./docs/images/M2-L2-2.png) |
+|:---|
+
 
   1. Material Preparation and Storage
     - Incoming Wafers, Substrates, Leadframes, Mold Compounds, Consumables
@@ -356,6 +369,8 @@ The ATMPs could be OSATs (like ASE, Amkor, TATA etc.) or in-house ATMPs of IDMs 
 ### 2.2 - Wafer Pre-Preparation - Grinding And Dicing
 
 This section explains the wafer preparation process inside an ISO Class 7 cleanroom of an ATMP (Assembly, Testing, Marking, and Packaging) facility. 
+| ![Wafer_Grinding_Dicing](./docs/images/M2-L2-3.png) |
+|:---|
 
 1. **Incoming Wafer Carrier**: Wafers arrive in a protective carrier that ensures they remain uncontaminated before entering the processing line.
 
@@ -372,6 +387,8 @@ This section explains the wafer preparation process inside an ISO Class 7 cleanr
 6.2 **Blade Dicing**: A high-precision blade is then used to physically dice the wafer into individual dies or chips. <br>
 
 ### 2.3 - Wire Bond Packaging - Die Attach To Molding
+| ![Wire_Bond_Packaging](./docs/images/M2-L2-4.png) |
+|:---|
 
 
 1. **Die Attach**: The individual (die) is attached to a substrate or lead frame using epoxy. <br>
@@ -398,6 +415,8 @@ This section explains the wafer preparation process inside an ISO Class 7 cleanr
 ### 2.4 - Flip Chip Assembly - Bump Formation And Underfill
 
 Flip chip packaging enhances electrical performance and I/O density by mounting the die face-down on the substrate.
+| ![FlipChip_Packaging](./docs/images/M2-L2-5.png) |
+|:---|
 
 1. **Bump Formation on Silicon (Si)**:
 1.1 Solder bumps are created on the die. <br>
@@ -430,6 +449,11 @@ There are two main types of WLP:
   - Fan-out WLP (FO-WLP) : Uses RDLs to extend the I/O pads beyond the die area, enabling higher I/O density.
 
 **<U>FO-WLP Process</U>**
+
+
+| ![WLP](./docs/images/M2-L2-6.png) |
+|:---|
+
 
 1. **Reconstitution Process:**
 1.1 Diced Wafer is taken <br>
