@@ -556,9 +556,16 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
 |![AEDT_IcePak_13](./docs/images/M3-LAB-13.png) |
 |:---|
 
+|![AEDT_IcePak_14](./docs/images/M3-LAB-14.png) |
+|:---|
 - **Step 5.2 : Add/ Assign Source Thermal Model for Substrate**
     - To add a thermal boundary condition for the substrate, right click on **_Flipchip_BGA1_substrate_** under `Models -> Flipchip_BGA1_Group -> Solids` and assign a Thermal Source.
     - Set the thermal condition on the substrate to Fixed Temperatue and the temperature as Ambient.
+|![AEDT_IcePak_15](./docs/images/M3-LAB-15.png) |
+|:---|
+
+|![AEDT_IcePak_16](./docs/images/M3-LAB-16.png) |
+|:---|
 
 
   - **Step 6 : Add Thermal monitors for the different components**
@@ -567,7 +574,14 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
     - Repeat the same to add thermal monitors for the die and the die-underfill.
       | Add Thermal monitor for Substrate <br>
 
+|![AEDT_IcePak_17](./docs/images/M3-LAB-17.png) |
+|:---|
 
+|![AEDT_IcePak_18](./docs/images/M3-LAB-18.png) |
+|:---|
+
+|![AEDT_IcePak_19](./docs/images/M3-LAB-19.png) |
+|:---|
 
       ### 3.4 - Meshing And Running The Thermal Analysis
 
@@ -579,8 +593,26 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
   - **Step 7.2 : Review Mesh Quality metrics**
     - Once the mesh is generated, review the quality metrics of the generated mesh such as Face Alignment, Skewness and Volume.
 
+ |![AEDT_IcePak_20](./docs/images/M3-LAB-20.png) |
+|:---|
+
+|![AEDT_IcePak_21](./docs/images/M3-LAB-21.png) |
+|:---|
+
+|![AEDT_IcePak_22](./docs/images/M3-LAB-22.png) |
+|:---|
+
+|![AEDT_IcePak_23](./docs/images/M3-LAB-23.png) |
+|:---|
+
+|![AEDT_IcePak_24](./docs/images/M3-LAB-24.png) |
+|:---|
+
 - **Step 8 : Add Thermal Analysis**
     - Under `Project Manager`, right click on `Analysis and then, select Add Analysis Setup` and configure the solver settings as required. (We will choose all default settings for our analysis)
+    - 
+|![AEDT_IcePak_25](./docs/images/M3-LAB-25.png) |
+|:---|
 
  ### 3.5 - Viewing Results And Exploring Other Package Types
 
