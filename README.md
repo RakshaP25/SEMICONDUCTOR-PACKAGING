@@ -163,8 +163,7 @@ Shields the die and wires from environmental damage.
   - Conventional Packages
   - Wafer-level packages
 
-In conventional packaging, the wafer is sawed into dice before the chip is packaged, while wafer-level packaging involves a part, or all, of the packaging process being performed at the wafer level before proceeding with wafer sawing.
- :
+In conventional packaging, the wafer is sawed into dice before the chip is packaged, while wafer-level packaging involves a part, or all, of the packaging process being performed at the wafer level before proceeding with wafer sawing:
  | ![Package_Classification](./docs/images/M1-L1-5.png) |
 |:---|
 
@@ -882,6 +881,11 @@ Now, repeat the steps 6 and 7 to create and connect all the die and substrate bo
 
 | ![AEDT_IcePak_1](./docs/images/M5-LAB-6.png) |
 |:---|
+
+
+| **THE FINAL RESULT:** <br> ![Typical_ATMP_Layout](./docs/images/M5-LAB-7.png) |
+|:---|
+
 ______________________________________________________________________________________________________________
   _________________________________________________________________________________________________________ 
 
