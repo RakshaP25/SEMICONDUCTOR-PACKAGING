@@ -31,7 +31,9 @@ The key Functions of semiconductor package are:
   4. **Thermal dissipation** to conduct heat away from the die
 
 ### 1.1 - Introduction To Semiconductor Packaging And Industry Overview
-<br>
+| ![Semiconductor_Packaging](./docs/images/M1-L1-1.png) |
+|:---:|
+
 The semiconductor industry is the backbone of modern technology—powering everything from smartphones and laptops to cars and satellites.The semiconductor manufacturing process consists of the front-end process which refers to the wafer manufacturing and the back-end process which consists of packaging and testing. (Even the wafer manufacturing process is split into a front-end and back-end process - with the front-end typically consisting of the CMOS-making process, and the back-end comprising the metal wiring formation process that comes after the CMOS is made.)
 
 📈** Industry Highlights:**
@@ -47,8 +49,11 @@ AI & Machine Learning: Driving demand for high-performance chips.
 5G & IoT: Expanding connectivity needs.
 Automotive Electronics: EVs and autonomous vehicles require advanced chips.
 Geopolitical Shifts: Countries investing in local fabs for security.
-*"The first phase of the packaging and testing process is wafer testing. Afterwards, packages are made in the packaging process and followed by the package test stage."*  
-_Ref:_ [_SK Hynix Newsroom: Semiconductor Back-End Process Episode 3_](https://news.skhynix.com/semiconductor-back-end-process-episode-1-understanding-semiconductor-testing/) 
+*"The first phase of the packaging and testing process is wafer testing. Afterwards, packages are made in the packaging process and followed by the package test stage."*
+| ![Semiconductor_Manufacturing](./docs/images/M1-L1-2.png) |
+|:---:|
+
+
   - Companies like Nvidia, Qualcomm and Apple that only design semiconductors are called *“fabless.”*
   - Products designed by fabless companies are made into wafers, and the facilities that produce these wafers are called *“foundries*.”
   -  Global companies with these facilities include TSMC, Global Foundries and UMC.
@@ -57,6 +62,8 @@ _Ref:_ [_SK Hynix Newsroom: Semiconductor Back-End Process Episode 3_](https://n
 ### 1.2 - Understanding Package Requirements And Foundational Package Types
 #### 1.2.1 - Package Requirements
 Semiconductor packages must meet a variety of technical, mechanical, and environmental demands to ensure the chip performs reliably in its intended application. Here are the key requirements:
+| ![Package_Requirements](./docs/images/M1-L1-3.png) |
+|:---:|
 **Selecting the right semiconductor package is a critical step in electronic system design, as it affects performance, cost, thermal management, size, and reliability.**
 The criteria for semiconductor package selection generally fall into the following key categories:
   - **Application-specific Requirements**
@@ -94,6 +101,9 @@ The criteria for semiconductor package selection generally fall into the followi
 #### 1.2.2 - Typical Package Structure
 A typical IC package consists of:
 A typical Integrated Circuit (IC) package is a carefully engineered structure designed to protect the silicon die and enable its connection to the external world. Here's a breakdown of its main components:
+| ![Package_Structure](./docs/images//M1-L1-4.png) |
+|:---:|
+
 
 🧩 Components of a Typical IC Package
 
@@ -155,6 +165,9 @@ Shields the die and wires from environmental damage.
 
 In conventional packaging, the wafer is sawed into dice before the chip is packaged, while wafer-level packaging involves a part, or all, of the packaging process being performed at the wafer level before proceeding with wafer sawing.
  :
+ | ![Package_Classification](./docs/images/M1-L1-5.png) |
+|:---|
+
 
 🔄 Evolution of Package Architectures
 1. Single-Chip Packages
