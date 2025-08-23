@@ -508,34 +508,24 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
 
 | ![AEDT_IcePak_6](./docs/images/M3-LAB-6.png) |
 |:---|
-
-| Package generated in Icepak <br> 
  
-|![AEDT_IcePak_7](./docs/images/M3-LAB-7.png) |
+| Package generated in Icepak <br> ![AEDT_IcePak_7](./docs/images/M3-LAB-7.png) |
 |:---|
 
 
 
  - **Step 3 : Explore the 3D Package Model Structure in Icepak**
 
-| **Ball Group** <br> 
-
-|![AEDT_IcePak_8](./docs/images/M3-LAB-8.png) |
+|**Ball Group** <br>![AEDT_IcePak_8](./docs/images/M3-LAB-8.png) |
 |:---|
 
-|**Substrate** <br>
-
-|![AEDT_IcePak_9](./docs/images/M3-LAB-9.png) |
+|**Substrate** <br>![AEDT_IcePak_9](./docs/images/M3-LAB-9.png) |
 |:---|
 
-| **Die Underfill** <br>
-
-|![AEDT_IcePak_10](./docs/images/M3-LAB-10.png) |
+|**Die Underfill** <br>![AEDT_IcePak_10](./docs/images/M3-LAB-10.png) |
 |:---|
 
-| **Die** <br>
-
-|![AEDT_IcePak_11](./docs/images/M3-LAB-11.png) |
+|**Die** <br>![AEDT_IcePak_11](./docs/images/M3-LAB-11.png) |
 |:---|
 
 
@@ -543,17 +533,16 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
 
   - **Step 4 : Review and modify the material and definition types for the different components of the model.**
 
-| Material Definitions <br> 
 
-|![AEDT_IcePak_12](./docs/images/M3-LAB-12.png) |
+| Material Definitions <br> ![AEDT_IcePak_12](./docs/images/M3-LAB-12.png) |
 |:---|
 
 
 
   - **Step 5.1 : Add/ Assign Source Thermal Model for Die**
     - In "Project Manager" sub-window, expand Thermal section and open the **_BGA1_die_source_** and configure the thermal condition
-| Source Thermal Model for Die <br> 
-|![AEDT_IcePak_13](./docs/images/M3-LAB-13.png) |
+
+|Source Thermal Model for Die <br>![AEDT_IcePak_13](./docs/images/M3-LAB-13.png) |
 |:---|
 
 |![AEDT_IcePak_14](./docs/images/M3-LAB-14.png) |
@@ -574,7 +563,7 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
     - Repeat the same to add thermal monitors for the die and the die-underfill.
       | Add Thermal monitor for Substrate <br>
 
-|![AEDT_IcePak_17](./docs/images/M3-LAB-17.png) |
+|Add Thermal monitor for Substrate <br>![AEDT_IcePak_17](./docs/images/M3-LAB-17.png) |
 |:---|
 
 |![AEDT_IcePak_18](./docs/images/M3-LAB-18.png) |
@@ -620,6 +609,8 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
     - Click on the **Validate** button in the top ribbon
     - Ensure all checks are validated successfully
 
+| **Validate the setup** <br> ![AEDT_IcePak_26](./docs/images/M3-LAB-26.png) |
+|:---|
 
   - **Step 10: Run the simulation and plot the temperature map**
     - Click on **Analyze All** button in the top ribbon
@@ -630,7 +621,20 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
       - Specify Name, Folder
       - Plot on Surface only
       - Surface Smoothing -> Enable Gaussian Smoothing
+| **Validating ** <br> ![AEDT_IcePak_27](./docs/images/M3-LAB-27.png) |
+|:---|
 
+| **TEMP Settings** <br> ![AEDT_IcePak_28](./docs/images/M3-LAB-28.png) |
+|:---|
+
+| **Field Plot Settings** <br> ![AEDT_IcePak_29](./docs/images/M3-LAB-29.png) |
+|:---|
+
+| **Field Plot - TOP view** <br> ![AEDT_IcePak_30](./docs/images/M3-LAB-30.png) |
+|:---|
+
+| **Field Plot - BOTTOM view** <br> ![AEDT_IcePak_31](./docs/images/M3-LAB-31.png) |
+|:---|
 _________________________________________________________________________________________________________  
 
 ## 4 - Ensuring Package Reliability: Testing and Performance Validation
@@ -639,6 +643,8 @@ ________________________________________________________________________________
 
 In semiconductor packaging, reliability isn't just a goal—it's a necessity.ICs are tested at multiple points during the manufacturing process to ensure they meet performance, reliability, and functionality requirements. Testing takes place both at the foundry and at OSAT facilities.This phase involves rigorous procedures such as thermal cycling, drop tests, electrical continuity checks, and accelerated aging simulations. By identifying potential failure modes early, engineers can refine materials, design, and assembly processes to deliver robust, high-performance packages that meet industry standards and customer expectations.
 
+|![AEDT_IcePak_32](./docs/images/M4-L4-1.png) |
+|:---|
 #### 4.1.1 - Foundry Testing Stages
 Foundry testing is a critical part of semiconductor fabrication, ensuring that wafers and individual dies meet stringent quality and performance standards before packaging and deployment. Here's a breakdown of the key stages:
 **1. Front-End Manufacturing**
@@ -663,9 +669,17 @@ Foundry testing is a critical part of semiconductor fabrication, ensuring that w
     - AOST (Assembly Open and Short Test): Shorts/ Opens in Packages
     - Burn-in Test: Elevated temperature and voltage and power cycling are applied to accelerate ageing to catch early failures.
     - Final Test: Validate the electrical performance of the packaged IC across temperature and voltage corners and ensure it meets the datasheet specifications.
+|![AEDT_IcePak_32](./docs/images/M4-L4-2.png) |
+|:---|
 
 **4. System Level Testing (SLT)**
   - Testing is performed in conditions that closely mimic real-world system operation. SLT verifies how a chip behaves when it runs actual software or firmware inside a system-like environment.
+
+Processing Zone (Clean room: ISO class 6 & 7): This area handles initial packaging steps in a controlled environment. Key activities include die bonding, wire or flip-chip bonding, encapsulation, and RDL (Redistribution Layer) formation. Inspection is integral to the manufacturing process to ensure quality. Packages are loaded onto a tray after singulation, as shown in the image with a tray of individual packaged chips.
+-Testing Area (Electrical, burn-in, and reliability chamber tests): This area focuses on validating the packaged chips. The process involves:
+-**AOST (Assembly Open and Short Test)**: Checks for open circuits and short circuits on the package board, using a package socket.
+|![AEDT_IcePak_32](./docs/images/M4-L4-3.png) |
+|:---|
 
 ### 4.2 - Reliability and Performance Testing of Semiconductor Packages
 
@@ -677,12 +691,17 @@ Foundry testing is a critical part of semiconductor fabrication, ensuring that w
   - Burn-in testing is a reliability screening process where semiconductor devices are exposed to elevated temperatures, voltages, and operating conditions for an extended period to accelerate aging and failure mechanisms.
   - It is used to identify and eliminate early-life failures (also called "infant mortality") in ICs before they are shipped to end users.
 
+|![AEDT_IcePak_32](./docs/images/M4-L4-4.png) |
+|:---|
+
 **2. Final Test (FT)**
 
    Its purpose is to verify that each integrated circuit (IC) meets all functional and performance specifications before shipment
   - Final Test is the last major electrical test phase after the semiconductor die has been packaged.
   - It verifies that the packaged device meets all functional, parametric, and performance specifications before it is shipped to customers.
   - It is typically performed by OSATs (Outsourced Semiconductor Assembly and Test providers) or in-house test facilities.
+|![AEDT_IcePak_32](./docs/images/M4-L4-5.png) |
+|:---|
 
 **Summary: ATE & Test Categories**
 ### 📊 Summary: ATE & Test Categories
@@ -698,6 +717,8 @@ Foundry testing is a critical part of semiconductor fabrication, ensuring that w
 | ESD & Latch-Up Test     | Ensures robustness against electrostatic discharge       | Applies controlled ESD pulses and monitors response         | Reliability Testing   |
 | Failure Analysis        | Diagnoses root causes of defects                         | Interfaces with diagnostic tools (e.g., SEM, X-ray)         | Post-test investigation |
 
+|![AEDT_IcePak_32](./docs/images/M4-L4-6.png) |
+|:---|
 
 ## 5 - Package Design and Modeling: Building a Semiconductor Package from Scratch
 
