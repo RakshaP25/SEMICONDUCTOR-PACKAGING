@@ -1,6 +1,6 @@
 # Semiconductor packaging
-This GitHub repository documents the Semiconductor Packaging - Fundamentals of Design and Testing 10-days Workshop offered by VSD Corp. Pvt. Ltd. attended from 15-27 Aug. 2025. 
-The workshop offers a full-pipeline understanding of the semiconductor packaging process, starting from the fundamentals and evolution of packaging to advanced 2.5D/3D architectures. We gain insights into advanced interconnect technologies, RDLs & interposers,  assembly processes, package reliability analysis, and also get to perform hands-on thermal simulations, package design and modeling using ANSYS tools.
+This repository showcases the learnings from the 10-day workshop on Semiconductor Packaging – Fundamentals of Design and Testing, conducted by VSD Corp. Pvt. Ltd. from August 15–27, 2025.
+The program delivers a comprehensive, end-to-end overview of the semiconductor packaging workflow—beginning with foundational concepts and the historical evolution of packaging technologies, and progressing to cutting-edge 2.5D and 3D integration strategies. Participants explore advanced interconnect methods, redistribution layers (RDLs), interposer design, and key assembly stages. The curriculum also covers reliability assessment techniques and culminates in practical sessions involving thermal simulation, package modeling, and design using ANSYS Electronics Desktop.
 <br/>
 
 **Table of Contents**
@@ -24,11 +24,7 @@ Bare silicon dies are fragile and cannot be directly used in the devices .
 3. Heat dissipation - to prevent the overheating during operation.
 4. Mechanical support - provides a stable from for assembly into devices.
 5. Standardization - definesthe sizer,pin count,and the layout for the compatibility.
-The key Functions of semiconductor package are:
-  1. **Protection** from external environmental (physical/ mechanical damage, humidity, corrosion/ contaminants & chemical damage and ESD)
-  2. **Electrical connectivity** between the die and the external environment via leads (pins, balls or lands)
-  3. **Mechanical support and connection** of the die to the system
-  4. **Thermal dissipation** to conduct heat away from the die
+
 
 ### 1.1 - Introduction To Semiconductor Packaging And Industry Overview
 | ![Semiconductor_Packaging](./docs/images/M1-L1-1.png) |
@@ -49,55 +45,38 @@ AI & Machine Learning: Driving demand for high-performance chips.
 5G & IoT: Expanding connectivity needs.
 Automotive Electronics: EVs and autonomous vehicles require advanced chips.
 Geopolitical Shifts: Countries investing in local fabs for security.
-*"The first phase of the packaging and testing process is wafer testing. Afterwards, packages are made in the packaging process and followed by the package test stage."*
+
 | ![Semiconductor_Manufacturing](./docs/images/M1-L1-2.png) |
 |:---:|
 
-
-  - Companies like Nvidia, Qualcomm and Apple that only design semiconductors are called *“fabless.”*
-  - Products designed by fabless companies are made into wafers, and the facilities that produce these wafers are called *“foundries*.”
-  -  Global companies with these facilities include TSMC, Global Foundries and UMC.
-  - Then, there are companies that test and package products that were designed by fabless vendors and later, made into wafers at foundries. These are called *OSAT (Out-Sourced Assembly and Test)* which include companies such as ASE and Amkor.
-  - Finally, there are the companies that do everything from design, wafer production, and packaging, to testing. These companies are called *IDMs (Integrated Device Manufacturer)*.
+  -Companies such as Nvidia, Qualcomm, and Apple, which specialize exclusively in the architectural design and intellectual property development of semiconductor devices—without owning fabrication facilities—are categorized as *“fabless semiconductor firms"*.
+  - Semiconductor products conceptualized by fabless firms are subsequently transformed into silicon wafers through advanced lithographic and fabrication processes. The industrial establishments responsible for executing these high-precision manufacturing operations are referred to as semiconductor foundries.
+  -  TSMC, Global Foundries and UMC are the global companies wich include these facilities.
+  -*OSAT (Out-Sourced Assembly and Test)* which include companies such as ASE and Amkor.
+  - *IDMs (Integrated Device Manufacturer)* these companies do everything from design, wafer production, and packaging, to testing..
 ### 1.2 - Understanding Package Requirements And Foundational Package Types
 #### 1.2.1 - Package Requirements
 Semiconductor packages must meet a variety of technical, mechanical, and environmental demands to ensure the chip performs reliably in its intended application. Here are the key requirements:
 | ![Package_Requirements](./docs/images/M1-L1-3.png) |
 |:---:|
-**Selecting the right semiconductor package is a critical step in electronic system design, as it affects performance, cost, thermal management, size, and reliability.**
+
 The criteria for semiconductor package selection generally fall into the following key categories:
-  - **Application-specific Requirements**
-    - Logic/ Memory die
-    - Power semiconductor die)
-  - **Electrical Requirements**
-    - I/O Pin Count
-    - Signal Integrity for high speed I/Os
-    - Power Delivery
-    - Must support high-speed signal transmission with minimal loss.
-    -Provide low resistance and inductance paths for power and ground.
-    -Ensure signal integrity and electromagnetic compatibility (EMC).
-  - **Thermal Requirements**
-    - Efficient heat dissipation is critical to prevent overheating.
-    - Use of heat sinks, thermal vias, or advanced materials like copper or ceramic.
-    -Thermal resistance must match the chip’s power output and operating conditions.
-  - **Mechanical and Physical constraints**
-    - Form Factor: Footprint and chip height requirements for the system
-    - System Integration needs: MCM, SiP, 2.5/3D packaging for tighter integration
-    - Must be compact and compatible with the final product’s design.Smaller packages are preferred for mobile and wearable devices.
-  - **Cost Considerations**
-    - Package cost
-    - Board/ System Assembly costBalance between performance and affordability.
-      Material selection and design complexity impact overall cost.
-  - **Compatibility**
-    - align with PCB layout, soldering techniques, and system architecture.
-    - Standardized interfaces help with integration across platforms.
-  - **Reliability and Durability**
-    - Mechanical stress
-    - Thermal cycling
-    - Moisture and other environmental factors
-  - **Environmental Resistance**
-    - Protection against moisture, dust, and corrosive elements.
-      Must comply with industry standards for reliability under harsh conditions (e.g., automotive or aerospace).
+### 📦 Semiconductor Package Selection Criteria
+
+| **Category**             | **Description**                                                                 |
+|--------------------------|---------------------------------------------------------------------------------|
+|  Electrical Performance | Signal integrity, power delivery, and parasitic effects (capacitance, inductance). |
+|  Thermal Management     | Ability to dissipate heat efficiently; includes thermal resistance and heat sink compatibility. |
+|  Mechanical Integrity   | Structural robustness, resistance to vibration, shock, and mechanical stress.   |
+|  Material Compatibility | Compatibility with PCB materials, solder types, and environmental conditions.   |
+|  Manufacturability      | Ease of assembly, yield rates, and compatibility with existing manufacturing processes. |
+|  Interconnect Density   | Number and arrangement of I/O connections; affects size and performance.        |
+|  Reliability & Durability| Long-term performance under environmental stress (humidity, temperature cycles). |
+|  Cost & Availability    | Overall cost of packaging, including materials, processing, and supply chain factors. |
+|  Size & Form Factor     | Physical dimensions and footprint constraints based on application requirements. |
+|  Scalability & Flexibility | Ability to adapt to future upgrades or different product variants.              |
+
+ 
 #### 1.2.2 - Typical Package Structure
 A typical IC package consists of:
 A typical Integrated Circuit (IC) package is a carefully engineered structure designed to protect the silicon die and enable its connection to the external world. Here's a breakdown of its main components:
@@ -135,27 +114,6 @@ Shields the die and wires from environmental damage.
 -Used in high-power applications to dissipate heat.
 -May be integrated into the package or added externally.
 
-**Mounting Technologies:**
-  - **Through-hole Mounting**
-    - TO : Transistor Outline
-    - SIP : Single In-line Package
-    - DIP : Dual In-line Package
-    - PGA : Pin Grid Array
-  - **Surface Mount Technology**:
-    - (T)SOT : (Thin) Small Outline Transistor
-    - (T)SOP : (Thin) Small Outline Package
-    - SOIC : Small Outline IC Package
-    - QFN : Quad Flat No-leads
-    - QFP : Quad Flat Package
-    - PBGA : Plastic Ball Grid Array
-    - LGA : Land Grid Array
-    - FCBGA : Flip Chip Ball Grid Array
-    - CSP : Chip Scale Package
-  - **Advanced Packages**
-    - PoP : Package on Package (Qualcomm SD series, Apple A-Series, Samsung Exynos etc.)
-    - MCM : Multi-Chip Module (eg: Intel Broadwell)
-    - SiP : System-in-Package (Apple S1)
-    - CoWoS : Chip on Wafer on Substrate (eg: Nvidia GP100, GV100, GA100, etc.)
     
 ### 1.3 - Evolving Package Architectures - From Single Chip To Multi-Chip Modules
 #### 1.3.1 Classification and Anatomy of Semiconductor Packages
@@ -166,9 +124,30 @@ Shields the die and wires from environmental damage.
 In conventional packaging, the wafer is sawed into dice before the chip is packaged, while wafer-level packaging involves a part, or all, of the packaging process being performed at the wafer level before proceeding with wafer sawing:
  | ![Package_Classification](./docs/images/M1-L1-5.png) |
 |:---|
+###  Mounting Technologies & Package Types
+
+| **Mounting Type**           | **Package**       | **Full Form / Description**                                               | **Examples / Notes**                                       |
+|----------------------------|-------------------|---------------------------------------------------------------------------|------------------------------------------------------------|
+| Through-hole Mounting    | TO                | Transistor Outline                                                        | Used for discrete transistors                              |
+|                            | SIP               | Single In-line Package                                                    | Pins in a single row                                       |
+|                            | DIP               | Dual In-line Package                                                      | Common for older ICs                                       |
+|                            | PGA               | Pin Grid Array                                                            | High pin count, used in CPUs                               |
+|  Surface Mount Technology | (T)SOT            | (Thin) Small Outline Transistor                                           | Compact transistor packaging                               |
+|                            | (T)SOP            | (Thin) Small Outline Package                                              | Thin version of SOP                                        |
+|                            | SOIC              | Small Outline Integrated Circuit                                          | Widely used for ICs                                        |
+|                            | QFN               | Quad Flat No-leads                                                        | No leads, good thermal performance                         |
+|                            | QFP               | Quad Flat Package                                                         | Leads on all four sides                                    |
+|                            | PBGA              | Plastic Ball Grid Array                                                   | Balls underneath, plastic encapsulation                    |
+|                            | LGA               | Land Grid Array                                                           | Pads instead of pins                                       |
+|                            | FCBGA             | Flip Chip Ball Grid Array                                                 | Flip-chip bonding for high performance                     |
+|                            | CSP               | Chip Scale Package                                                        | Package size ≈ chip size                                   |
+|  Advanced Packages        | PoP               | Package on Package                                                        | Stacked ICs (Qualcomm SD, Apple A-Series, Exynos)          |
+|                            | MCM               | Multi-Chip Module                                                         | Multiple dies in one package (e.g., Intel Broadwell)       |
+|                            | SiP               | System-in-Package                                                         | Complete system in one package (e.g., Apple S1)            |
+|                            | CoWoS             | Chip on Wafer on Substrate                                                | High-performance stacking (e.g., Nvidia GP100, GA100)      |
 
 
-🔄 Evolution of Package Architectures
+### Evolution of Package Architectures
 1. Single-Chip Packages
 -Traditional packaging method.
 -Contains one silicon die per package.
@@ -196,29 +175,13 @@ In conventional packaging, the wafer is sawed into dice before the chip is packa
 #Saves space and boosts performance.
 #Ideal for memory integration (e.g., HBM with processors).
 
-**🧠 Why This Evolution Matters**
+**### Why This Evolution Matters**
 . Performance Boost: Shorter interconnects mean faster communication.
 . Power Efficiency: Reduced parasitics and better thermal management.
 . Form Factor Reduction: Smaller, thinner devices.
 . Heterogeneous Integration: Mix logic, memory, analog, and RF in one package. 
-Depending on the medium of the package, packages can be further categorized into leadframe and laminate packages.
-  - **Leadframe-Based Packages**
-    - **DIP**: Traditional, with wirebonds and external leads
-    - **QFN**: Compact with exposed thermal pads
-    - **Leadframe CSP & QFP**: Scaled for density and SMT
 
-  - **Laminate-Based Packages**
-    - **PBGA**: Wirebonded to laminated substrates
-    - **Flip Chip PBGA**: Superior signal and thermal performance
-    - **LGA, FCCSP**: Common in modern devices
-
-  - **Advanced Substrates**
-    - **2D**: Dies placed side-by-side on the same substrate
-    - **2.1D**: Adds RDL for better routing
-    - **2.3D**: Uses organic interposers
-    - **2.5D**: Silicon interposer for high-speed interconnects (e.g.: CoWoS)
-   Semiconductor Packages
-## 📦 Semiconductor Package Types
+##  Semiconductor Package Types
 
 | Package Type | Full Name                      | Mounting Style     | Description                                                                 |
 |--------------|--------------------------------|---------------------|------------------------------------------------------------------------------|
@@ -237,55 +200,72 @@ Depending on the medium of the package, packages can be further categorized into
 | SOT-23       | Small Outline Transistor       | Surface-mount       | Tiny package for discrete transistors and diodes                             |
 | SOIC         | Small Outline Integrated Circuit | Surface-mount     | Shrunk version of DIP; common in analog and digital ICs                      |
 
+:
 
+### Leadframe-Based Packages
+These are traditional packaging formats that rely on metal leadframes for mechanical support and electrical connections.
+-Dual In-line Package (DIP): A classic format with two rows of external leads and wirebonded die. Common in prototyping and legacy systems.
+-Quad Flat No-lead (QFN): A compact surface-mount package with no protruding leads and an exposed thermal pad underneath for efficient heat dissipation.
+-Leadframe CSP & QFP: Chip-scale and quad flat packages built on leadframes, optimized for surface-mount technology and higher pin density.
+
+### Laminate-Based Packages
+These packages use laminated substrates to support more complex routing and better thermal performance.
+-Plastic Ball Grid Array (PBGA): The die is wirebonded to a laminated substrate, with solder balls underneath for board connection.
+-Flip Chip PBGA: Uses flip-chip bonding instead of wirebonds, offering superior signal integrity and thermal performance.
+-Land Grid Array (LGA) & Flip Chip Chip Scale Package (FCCSP): These modern formats feature flat contact pads or chip-scale footprints, widely used in mobile and computing devices.
+
+### Advanced Substrate Technologies
+These architectures support multi-die integration and high-speed interconnects, often used in cutting-edge applications.
+-2D Packaging: Multiple dies are placed side-by-side on a single substrate. Simple and cost-effective for moderate integration.
+
+2.1D Packaging: Adds Redistribution Layers (RDLs) to reroute signals, improving layout flexibility and performance.
+
+2.3D Packaging: Incorporates organic interposers to bridge dies, balancing performance and cost.
+
+2.5D Packaging: Uses silicon interposers (e.g., CoWoS) to connect multiple dies with high-speed links, ideal for GPUs and data center chips.
 
 ### 1.4 - Interposers, RDLs And 2.5D/3D Packaging Approaches
 #### 1.4.1 - Redistribution Layers (RDL)
 
-🔁 **RDLs (Redistribution Layers)**
-Definition: Metal layers added to reroute I/O pads of a die to new locations.RDL (Redistribution Layer) is a metal layer added on top of a die or wafer to reroute the I/O pads to new locations. This enables more flexible bump layouts, especially important for fan-out packages or wafer-level chip scale packaging (WLCSP).
+ **RDLs (Redistribution Layers)**
+Definition: Metal layers added to reroute I/O pads of a die to new locations.RDL (Redistribution Layer) is a metal layer added on top of a die or wafer to reroute the I/O pads to new locations. 
 | ![Package_Interposers_RDLs](./docs/images/M1-L1-6.png) |
 |:---|
 
+*Applications of RDLs*
+-RDLs are widely used in cutting-edge packaging formats where space, performance, and integration matter most:
+-Fan-Out Wafer-Level Packaging (FOWLP): RDLs enable signal routing beyond the die edge, allowing for compact, high-performance packages.
+-System-in-Package (SiP): Used to interconnect multiple dies (logic, memory, RF) within a single package.
+-Panel-Level Packaging (PLP): RDLs support large-area manufacturing for cost-effective high-volume production.
+-2.5D and 3D Integration: RDLs help connect the dies through the interposers or vertical stacking .
 
-Application: Used in Fan-Out Wafer-Level Packaging (FOWLP) and 3D stacking to connect dies efficiently.
-    - Fan-out wafer-level packaging (FO-WLP, FO-BGA)
-    - Panel-level packaging (PLP)
-    - Multi-die integration
-    - System-in-Package (SiP)
-
-Advantages:
-    - Allows larger bump pitch for finer pad layouts
-    - Reduces package size and thickness
-    - Enables multi-chip placement and interconnect on a single substrate
+*Advantages of RDLs*
+-RDLs offer several performance and design benefits that make them indispensable in modern IC packaging:
+-**Enhanced Routing Flexibility**: Designers can relocate I/O pads to optimize signal paths and enable complex layouts.
+-**Reduced Package Size**: By redistributing connections, RDLs allow for smaller, thinner packages—ideal for mobile and wearable devices.
+-**Improved Signal Integrity**: Shorter and more direct interconnects reduce latency and electromagnetic interference.
+-**Higher Interconnect Density**: Supports more I/O connections in a limited footprint.
+- **Better Thermal Management**: Optimized layouts help distribute heat more evenly across the package.
+-**Cost Efficiency**: Enables advanced packaging without the need for expensive interposers in some cases.
 
 #### 1.4.2 - Interposers
-An interposer is a passive or active layer inserted between the die and the substrate, acting as an intermediate routing interface. It enables dense signal routing, power delivery, and die-to-die interconnect.
-
-  - Types: Silicon, Organic, Glass
-
-  -  Functions:Enables fan-out packaging and improves signal routing flexibility.
-    - Routes signals between multiple dies (e.g., chiplets)
-    - Provides thermal expansion management
-    - Enables high bandwidth communication
-     
-
-  - Passive vs. Active Interposers:
-    - Passive: No logic, just routing and vias
-    - Active: Includes power delivery, clocking, or even memory logic
-
+An interposer is a substrate layer placed between the silicon dies and the package substrate. It contains fine-pitch wiring, through-silicon vias (TSVs), and redistribution layers (RDLs) to reroute signals and power between components.
+They’re typically made from:
+-Silicon: High precision, ideal for high-speed applications.
+-Organic materials: Cost-effective and easier to process.
+-Glass: Emerging option with excellent electrical insulation and dimensional stability.
 #### 1.4.3 - 2.5D/3D Integration
-  - **2.5D**: Multiple dies (e.g., CPU + HBM) placed side-by-side on a common interposer. Interposer provides connectivity, not the substrate directly. Popular in HPC and AI (e.g., AMD Instinct, NVIDIA GPUs with HBM).
+  - **2.5D**:
   - Structure: Multiple dies placed on a shared interposer.
   - Benefits: High bandwidth, low latency, and heterogeneous integration.
   - Example: AMD’s chiplet-based CPUs.
-  - **3D**: Dies are stacked vertically, interconnected through Through-Silicon Vias (TSVs). 3D NAND, HBM memory stacks, logic-on-logic stacking.
+  - **3D**: 
   - Structure: Multiple dies placed on a shared interposer.
   - Benefits: High bandwidth, low latency, and heterogeneous integration.
   - Example: AMD’s chiplet-based CPUs.
 
 ### 1.5 - Comparative Analysis And Selecting The Right Packaging Solution
-The following table provides a comparison of the various IC package types and their typical applications:
+
 | ![Packages_Comparison](./docs/images/M1-L1-7.png) |
 |:---|
 
@@ -325,147 +305,111 @@ Selecting the right semiconductor packaging depends on multiple criteria across 
 _________________________________________________________________________________________________________  
 
 ## 2 - From Wafer to Package: Assembly and Manufacturing Essentials
-This section covers the semiconductor supply chain and provides a detailed look into a package manufacturing unit (**ATMP** – Assembly, Testing, Marking, and Packaging).
+Once the semiconductor wafer fabrication is complete, the journey from raw silicon to a functional chip package involves several precision-driven steps:
+-**Wafer Thinning**: The wafer is ground down to reduce thickness, improving thermal performance and enabling advanced packaging.
+-**Dicing**: The wafer is sliced into individual dies using laser or mechanical sawing.
+-**Die Attach**: Each die is bonded to a substrate or leadframe using adhesives or solder.
+-**Interconnect Formation**: Electrical connections are made via wire bonding, flip-chip bonding, or TSVs depending on the package type.
+-**Encapsulation**: The die and interconnects are sealed with molding compounds or lids to protect against environmental damage.
+-**Testing**: Functional and parametric tests are performed to ensure chip reliability and performance.
+-**Marking & Singulation**: Packaged units are labeled and separated for final inspection and shipment.
 
 ### 2.1 - Setting The Stage - Supply Chain And Facilities
-#### 2.1.1 - Semiconductor Supply Chain Overview
-The semiconductor supply chain is a multi-step process that transforms raw silicon into fully functional electronic products. The major steps are:
 
-| Semiconductor Supply Chain Review|
-|:---|
-| **1. Design : Chip design and verification** <br> <ul> <li>**Input** : Product requirements specification, EDA tools, Foundry PDKs, IPs</li> <li>**Output** : GDSII layout file is _taped out_ to the foundry for mask creation and wafer fabrication. Test programs are also provided by the Design house for Wafer and Package level testing.</li> <li>Examples: Nvidia, AMD, MediaTek, Intel, TI, Apple, ARM etc.</li> </ul> |
-| **2. Wafer Fabrication (Foundry) : Physical ICs are manufactured onto wafers using photolithography and other processes** <br> <ul> <li> **Input** : GDSII layout, Silicon wafers, Equipment, Gases, chemicals, Materials</li> <li> **Output**: Processed wafers with patterned dies</li> <li> Examples: TSMC, Samsung, Intel, GlobalFoundries</li> </ul> |
-| **3. Packaging Assembly & Test : ICs are cut (diced), bonded, encapsulated, and tested** <br> <ul> <li>**Input**: Test programs, Singulated dies, substrate materials (e.g., ABF, BT resin), solder bumps</li> <li> **Output**: Packaged IC (e.g., BGA, QFN, FCBGA, 2.5D/3D)</li> <li> Examples: ASE, Amkor, JCET, Shinko, Ibiden</li> </ul> |
-| **4. Board Assembly & Test : Multiple packaged ICs are mounted and board-level validation** <br> <ul> <li>**Input**: Packaged ICs, test programs, ATE systems</li> **Output**: Qualified ICs, binned by performance. Yield improvement and binning are critical for profitability.</li> <li> Examples: ASE, Powertech, Amkor, UTAC</li> </ul> |
-| **5. System Integration & Distribution** <br> <ul> <li>**Input**: Packaged, tested ICs; PCBs; passive components </li> <li> **Process**: SMT assembly, system-level integration, validation </li> <li>**Output**: Complete electronic systems (e.g., smartphones, servers) </li> <li>Examples: OEMs Original Equipment Manufacturer (Apple, Cisco), ODMs Original Design Manufacturer (Foxconn, Pegatron), EMS Electronics Manufacturing Services (Flex, Jabil)</li> </ul> |
+##  Semiconductor Supply Chain Overview
+
+| Stage                  | Description                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| **Raw Material Extraction** | Silicon is purified from quartz and processed into ingots or wafers.         |
+| **Wafer Fabrication**       | Transistors and circuits are formed on the wafer using photolithography, etching, and doping. |
+| **Wafer Testing**           | Electrical tests are performed to identify functional dies before packaging. |
+| **Wafer Dicing**            | The wafer is cut into individual dies using precision sawing or laser techniques. |
+| **Die Attach**              | Each die is mounted onto a substrate or leadframe using adhesives or solder. |
+| **Interconnect Formation** | Electrical connections are made via wire bonding, flip-chip, or TSVs.         |
+| **Encapsulation**          | The die and interconnects are sealed to protect against environmental damage. |
+| **Final Testing**          | Packaged chips undergo functional and reliability testing.                    |
+| **Marking & Singulation**  | Chips are labeled and separated for shipment.                                 |
+| **System Integration**     | Chips are assembled onto PCBs or modules for use in electronic products.      |
+
 
 | ![Semiconductor_Supply_Chain](./docs/images/M2-L2-1.png) |
 |:---|
 
 #### 2.1.2 - Introduction to a Package Manufacturing Unit (ATMP)
-The ATMP process involves four core activities: Assembly, Testing, Marking, and Packaging.
-The ATMPs could be OSATs (like ASE, Amkor, TATA etc.) or in-house ATMPs of IDMs (like Intel, Samsung, Micron) or Foundries (like TSMC, Samsung Foundry)
 
 | **Typical layout of an ATMP:** <br> ![Typical_ATMP_Layout](./docs/images/M2-L2-2.png) |
 |:---|
+**Introduction to a Package Manufacturing Unit (ATMP):**
+An ATMP unit is a specialized facility in the semiconductor supply chain that handles the final stages of chip production—transforming bare silicon dies into fully packaged, tested, and ready-to-use integrated circuits.
 
+**IT INVOLVES?**
+**Assembly*: Mounting the silicon die onto a substrate or leadframe, followed by interconnect formation (e.g., wire bonding, flip-chip).
+**Test*: Electrical and functional testing to ensure each chip meets performance and reliability standards.
+**Mark*: Laser or ink marking for identification, traceability, and branding.
+**Pack*: Encapsulation and final packaging to protect the chip from environmental damage and prepare it for shipment.
 
-  1. Material Preparation and Storage
-    - Incoming Wafers, Substrates, Leadframes, Mold Compounds, Consumables
-  2. Processing Zone (Clean Room: ISO Class 6 & 7)
-    - Major activities:
-      - Die Attach & Mount
-      - Wire or Flip-Chip Bonding
-      - RDL formation
-      - Encapsulation/ molding.
-  3. Testing Area
-    - Electrical Tests
-    - Burn-in Test
-    - Reliability chamber testing
-  4. Warehouse
-    - Storage of packaged ICs
+**ATMP facilities are essential for:**
+-Accelerating time-to-market.
+-Supporting diverse applications (consumer electronics, automotive, telecom, IoT).
+-Enabling vertical integration for chipmakers and system integrators.
 
 ### 2.2 - Wafer Pre-Preparation - Grinding And Dicing
 
-This section explains the wafer preparation process inside an ISO Class 7 cleanroom of an ATMP (Assembly, Testing, Marking, and Packaging) facility. 
+ Explains  about the wafer preparation process inside an ISO Class 7 cleanroom of an ATMP (Assembly, Testing, Marking, and Packaging) facility. 
 | ![Wafer_Grinding_Dicing](./docs/images/M2-L2-3.png) |
 |:---|
 
-1. **Incoming Wafer Carrier**: Wafers arrive in a protective carrier that ensures they remain uncontaminated before entering the processing line.
-
-2. **Wafer Inspection**: The wafers are visually and optically inspected for surface defects, contamination, or damage before further processing.
-
-3. **Wafer Front Tape Lamination**: A protective tape is laminated on the front (device side) of the wafer to protect it during subsequent processes like grinding and dicing.
-
-4. **Wafer Backside Grinding**: The wafer’s backside is ground using a rotating grinding wheel to reduce the wafer thickness from the ~700um to around 200um and enable better thermal performance and flexibility for final packaging.
-
-5. **Tape Frame Mounting to Wafer Backside**: After grinding, the wafer is mounted on a ring frame using an adhesive tape. This stabilizes the wafer and keeps individual die in place during dicing.
-
-6. **Two-step Wafer Dicing (Laser Grooving + Blade Dicing)**: <br>
-6.1 **Laser Grooving**: Precision laser cuts grooves along scribe lines to weaken the wafer structure. <br>
-6.2 **Blade Dicing**: A high-precision blade is then used to physically dice the wafer into individual dies or chips. <br>
 
 ### 2.3 - Wire Bond Packaging - Die Attach To Molding
 | ![Wire_Bond_Packaging](./docs/images/M2-L2-4.png) |
 |:---|
 
 
-1. **Die Attach**: The individual (die) is attached to a substrate or lead frame using epoxy. <br>
-1.1 The Epoxy is dispensed onto the die in some pattern so as to avoid any voids during attach. (Pattern complexity vs. speed of processing trade-off) <br>
-1.2 The die is picked up by the pick-up head, and <br>
-1.3 Placed on the Die Attach Film (DAF) <br>
-
-2. **Curing**: The die-attached unit is subjected to a heating process to cure the epoxy, ensuring a strong and stable bond between the die and the substrate.
-
-3. **Wire Bonding**: Fine gold or aluminum wires are bonded between the die and the package substrate pads using thermal and ultrasonic energy. <br>
-3.1 Formation of a ball bond using an EFO (Electronic Flame-Off) spark
-3.2 Bonding the ball to the die pad (using pressure, vibration, heat)
-3.3 Creating a wire loop
-3.4 Forming a crescent bond on the substrate side
-
-4. **Molding (Transfer Molding)**: A mold compound is injected to encapsulate the wire-bonded die, providing protection from environmental damage and mechanical stress. Resin flows uniformly to cover the entire chip.
-
-5. **Marking (Laser)**: Laser marking is used to engrave identification codes, logos, or batch numbers on the molded package surface.
-
-6. **Singulation (Dicing Blade)**: The molded wafer is cut into individual units (ICs) using a dicing blade. A thinner blade is typically used to minimize chipping and maximize precision.
-
-
-
 ### 2.4 - Flip Chip Assembly - Bump Formation And Underfill
 
-Flip chip packaging enhances electrical performance and I/O density by mounting the die face-down on the substrate.
+
 | ![FlipChip_Packaging](./docs/images/M2-L2-5.png) |
 |:---|
 
-1. **Bump Formation on Silicon (Si)**:
-1.1 Solder bumps are created on the die. <br>
-1.2 The bumps are then reflowed to form strong electrical and mechanical connections. <br>
-
-2. **Chip Flip and Placement**:
-2.1 The chip is flipped upside down. <br>
-2.3 Flux is dispensed on to the substrate to aid solder wetting. <br>
-2.2 Solder balls are aligned with the substrate’s bond pads. <br>
-
-3. **Solder Reflow**: The chip is heated so that the solder balls melt and bond with the substrate.
-
-4. **Flux Cleansing**: The excess residual flux is removed using solvent spray to prevent corrosion.
-
-5. **Underfill Dispensing**: Underfill material is applied to improve mechanical strength and thermal conductivity between the die and substrate.
-
-6. **Underfill Cure**: Heated to cure the underfill.
-
-7. **Molding**: A protective mold compound is applied.
-
-8. **Marking**: Laser marking is done for identification (part number, lot, batch, date of manufacture etc.) and traceability.
-
-9. **Ball Mounting and Reflow**: Solder balls are mounted on the substrate. A final reflow process ensures firm attachment of solder balls.
 
 ###2.5 - Wafer Level Packaging And Conclusion
 
-Wafer-Level Packaging (WLP) is a technique where the entire packaging process is done at the wafer level, before dicing and offers smaller size, and lower cost.  
-There are two main types of WLP:
-  - Fan-in WLP (FI-WLP) : I/O pads are redistributed within the die area to match the solder bumps.
-  - Fan-out WLP (FO-WLP) : Uses RDLs to extend the I/O pads beyond the die area, enabling higher I/O density.
+Wafer-Level Packaging (WLP)
+Wafer-Level Packaging is an advanced technique where the entire packaging process is performed while the die is still part of the wafer, before dicing. This approach enables ultra-compact, high-performance packages and is widely used in mobile, IoT, and high-density applications.
 
-**<U>FO-WLP Process</U>**
+**Key Features**
+-True Chip-Scale Packaging: The final package size closely matches the die dimensions.
+
+-Fan-In WLCSP: Interconnects remain within the die footprint.
+
+-Fan-Out WLCSP: Redistribution layers (RDLs) extend beyond the die, allowing more I/O connections.
+
+-Integrated Process Flow: Combines wafer fab, packaging, testing, and burn-in at wafer level.
+
+**Applications**
+-Smartphones and wearables
+
+-Sensors and MEMS devices
+
+-RF and power management ICs
+
+-High-performance memory modules.
+
+**Finally Wafer-Level Packaging represents a major leap in semiconductor miniaturization and integration. By performing packaging at the wafer stage, WLP enables:*
+-Smaller form factors for compact devices
+
+-Improved electrical performance through shorter interconnects
+
+-Lower cost and higher throughput in high-volume manufacturing
+
+-Scalability for future heterogeneous integration and 3D stacking
+
+-As demand grows for thinner, faster, and more power-efficient electronics, WLP continues to be a cornerstone of next-generation semiconductor design.
 
 
 | ![WLP](./docs/images/M2-L2-6.png) |
 |:---|
 
-
-1. **Reconstitution Process:**
-1.1 Diced Wafer is taken <br>
-1.2 From this, only the known-good dies are picked and placed onto a temporary carrier. <br>
-1.3 Molding to form a single reconstituted wafer after releasing the carrier. <br>
-
-2. **RDL (Redistribution Layer) Preparation**:
-2.1 Dielectric & Metal are layers are deposited on to the reconstituted wafer and patterned. <br>
-2.2 Multiple such RDL layers are patterned to form the final RDL, similar to the metallization stages in FEOL/ CMOS facbrication <br>
-
-3. **Solder Ball Attach**: Solder Balls are mounted on the final RDL pads to enable surface mounting. <br>
-
-4. **Final Laser Marking and Singulation**: Each packaged die is marked and the reconstituted wafer is diced (singulated) into individual packages.
 
 _________________________________________________________________________________________________________  
 
@@ -473,29 +417,28 @@ ________________________________________________________________________________
 
 ### 3.1 - Introduction And Getting Started With ANSYS Electronics Desktop
 
-ANSYS Electronics Desktop (AEDT) is a multi-physics simulation software that combines Electromagnetic, Signal Integrity, Thermal and Electro-Mechanical simulation tools in a single integrated platform. It is widely used for designing and analyzing high-speed electronic circuits and systems.
+ANSYS Electronics Desktop{AEDT} is a unified simulation platform that integrates multiple electromagnetic, thermal, and circuit solvers under one environment. It’s widely used for designing and analyzing high-frequency, low-frequency, and electrothermal systems—such as antennas, PCBs, IC packages, motors, and connectors.
 
 ### 3.2 - Setting Up A Flip-Chip BGA Package
 
 We will be taking an already available FC-BGA package within the Icepak Toolkit for this simulation exercise.
 
 
-  - **Step 1 : Open AEDT and launch Icepak**
+  - **Step 1 : Open ANSYS{AEDT} and launch the Icepak**
 
 | ![AEDT_IcePak_1](./docs/images/M3-LAB-1.png) |
 |:---|
 
 
-  - **Step 2.1 : Create a Flipchip BGA Package**
+  - **Step 2 : Create a Flipchip BGA Package**
     - `Icepak -> Toolkit -> Geometry -> Packages -> Flipchip_BGA`
 
 | ![AEDT_IcePak_2](./docs/images/M3-LAB-2.png) |
 |:---|
 
 
-  - **Step 2.2 : The Package Configuration window opens up**
-    - The dimensions and other aspects of the package, substrate, die, die underfill and the solder balls can be configured here.
-    - Once configured, click OK to generate the package model.
+  - **Step 3 : The Package Configuration window opens up**
+    -
  | ![AEDT_IcePak_3](./docs/images/M3-LAB-3.png) |    
 |:---|
 
@@ -513,7 +456,7 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
 
 
 
- - **Step 3 : Explore the 3D Package Model Structure in Icepak**
+ - **Step 3 :  3D Package Model Structure in Icepak**
 
 |**Ball Group** <br>![AEDT_IcePak_8](./docs/images/M3-LAB-8.png) |
 |:---|
@@ -538,17 +481,16 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
 
 
 
-  - **Step 5.1 : Add/ Assign Source Thermal Model for Die**
-    - In "Project Manager" sub-window, expand Thermal section and open the **_BGA1_die_source_** and configure the thermal condition
-
+  - **Step 5 : Use the  Source Thermal Model for Die**
+    -
 |Source Thermal Model for Die <br>![AEDT_IcePak_13](./docs/images/M3-LAB-13.png) |
 |:---|
 
 |![AEDT_IcePak_14](./docs/images/M3-LAB-14.png) |
 |:---|
-- **Step 5.2 : Add/ Assign Source Thermal Model for Substrate**
-    - To add a thermal boundary condition for the substrate, right click on **_Flipchip_BGA1_substrate_** under `Models -> Flipchip_BGA1_Group -> Solids` and assign a Thermal Source.
-    - Set the thermal condition on the substrate to Fixed Temperatue and the temperature as Ambient.
+- **Step 5.2 : now add the  Source Thermal Model for Substrate**
+    - Right click on **_Flipchip_BGA1_substrate_** under `Models -> Flipchip_BGA1_Group -> Solids` and ADD The  Thermal Source.
+    -Set the substrate’s thermal boundary condition to a constant value equal to the ambient temperature
 |![AEDT_IcePak_15](./docs/images/M3-LAB-15.png) |
 |:---|
 
@@ -557,10 +499,10 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
 
 
   - **Step 6 : Add Thermal monitors for the different components**
-    - To add a Thermal monitor to the substrate, right click on the **_Flipchip_BGA1_substrate_** under `Models -> Flipchip_BGA1_Group -> Solids` and then choose `Assign Monitor -> Point...`
-    - In the sub-window that appears, select **Temperature**
-    - Repeat the same to add thermal monitors for the die and the die-underfill.
-      | Add Thermal monitor for Substrate <br>
+    -Models -> Flipchip_BGA1_Group -> Solids` and then choose `Assign Monitor -> Point`
+    - In the sub-window select **Temperature**
+    - return these process for die and the under fill.
+
 
 |Add Thermal monitor for Substrate <br>![AEDT_IcePak_17](./docs/images/M3-LAB-17.png) |
 |:---|
@@ -571,15 +513,14 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
 |![AEDT_IcePak_19](./docs/images/M3-LAB-19.png) |
 |:---|
 
-      ### 3.4 - Meshing And Running The Thermal Analysis
+   ### 3.4 - Meshing And Running The Thermal Analysis
 
-  - **Step 7.1 : Generate Mesh**
-    - Go to the Simulation tab and click on `Generate Mesh`
-    - Save the project if prompted and wait for the mesh generation to get completed.
-    - Take a note of any error(s) and warning(s) that are shown and ignore/ take steps to debug & fix the issue(s) as required.
+  - **Step 7 :1. Generating the  Mesh**
+    - Click on the Simulation tab and click on **GENERATE MESH*
+    -after this save the project if there is no issues found and debug if any errors found
 
-  - **Step 7.2 : Review Mesh Quality metrics**
-    - Once the mesh is generated, review the quality metrics of the generated mesh such as Face Alignment, Skewness and Volume.
+  - **2. : REWEING THE  Mesh Quality metrics**
+    -Check for the Face Alignment, Skewness and Volume once the mesh is generated.
 
  |![AEDT_IcePak_20](./docs/images/M3-LAB-20.png) |
 |:---|
@@ -596,30 +537,26 @@ We will be taking an already available FC-BGA package within the Icepak Toolkit 
 |![AEDT_IcePak_24](./docs/images/M3-LAB-24.png) |
 |:---|
 
-- **Step 8 : Add Thermal Analysis**
-    - Under `Project Manager`, right click on `Analysis and then, select Add Analysis Setup` and configure the solver settings as required. (We will choose all default settings for our analysis)
+- **Step 8 :  Thermal Analysis**
     - 
 |![AEDT_IcePak_25](./docs/images/M3-LAB-25.png) |
 |:---|
 
- ### 3.5 - Viewing Results And Exploring Other Package Types
+ ### 3.5 - Viewing Results And Other Package Types
 
-  - **Step 9 : Now, Validate the Simulation setup**
-    - Click on the **Validate** button in the top ribbon
+  - **Step 9 :  Validating**
+    - Choose the **Validate** button in the top 
     - Ensure all checks are validated successfully
 
 | **Validate the setup** <br> ![AEDT_IcePak_26](./docs/images/M3-LAB-26.png) |
 |:---|
 
   - **Step 10: Run the simulation and plot the temperature map**
-    - Click on **Analyze All** button in the top ribbon
-    - Wait for the simulation to get completed successfully. Take note of any warning(s) or errors that may need further debug or setup modification(s).
-    - Once the simulation is completed, select the complete FC-BGA package in the 3D view by drawing a selection rectangle using the left-mouse button.
-    - Right click and then select `Plot Fields -> Temperature -> Temperature`
-    - Configure the different plot options:
-      - Specify Name, Folder
-      - Plot on Surface only
-      - Surface Smoothing -> Enable Gaussian Smoothing
+    -  **Analyze All** button in the top ribbon  analyses all the mistakes and tells us about the mistakes which has to be corrected.
+    -now DEBUG all the issues in the given left most box 
+    -  Plot Fields -----> Temperature -----> Temperature`
+ - different plot options:
+      - Specify Name, Folder----> Plot on Surface only-----> Surface Smoothing -> Enable Gaussian Smoothing
 | **Validating ** <br> ![AEDT_IcePak_27](./docs/images/M3-LAB-27.png) |
 |:---|
 
@@ -647,27 +584,23 @@ In semiconductor packaging, reliability isn't just a goal—it's a necessity.ICs
 #### 4.1.1 - Foundry Testing Stages
 Foundry testing is a critical part of semiconductor fabrication, ensuring that wafers and individual dies meet stringent quality and performance standards before packaging and deployment. Here's a breakdown of the key stages:
 **1. Front-End Manufacturing**
-  - Involves fabrication of integrated circuits on silicon wafers.
-  - Leads to fine tuning of the Process parameters to improve yield, reduce IDDQ/ leakage and improve speed/ performance.
-
 **2. Wafer Probe Test**
-  - Wafer is mounted on a probe station and a probe card with makes contact with the bond pads or bump pads of each die.
-  - An ATE can now send test patterns to mark the die as good or bad.
 
 #### 4.1.2 - OSAT Testing Stages
-**1. Wafer Sorting**
-  - Dies are sorted based on probe test results.
-  - Only functional dies proceed to packaging.
+##  OSAT Testing Stages
 
-**2. Package Manufacturing**
-  - Functional dies are packaged
+| Stage No. | Testing Stage           | Description                                                                 |
+|-----------|-------------------------|-----------------------------------------------------------------------------|
+| 1         | Wafer Sawing            | Slicing the wafer into individual dies using precision dicing tools.       |
+| 2         | Die Attach              | Bonding each die to a substrate or package using adhesive or solder.       |
+| 3         | Wire Bonding / Flip-Chip | Creating electrical connections via wire bonds or solder bumps.            |
+| 4         | Encapsulation           | Molding the package to protect the die from environmental damage.          |
+| 5         | Pre-Test Inspection     | Visual and automated checks for defects before electrical testing.         |
+| 6         | Electrical Testing      | Verifying functionality, signal integrity, and power characteristics.      |
+| 7         | Burn-In Testing         | Stress testing under elevated temperature and voltage to detect failures.  |
+| 8         | Final Inspection        | Marking, labeling, and visual inspection for compliance and quality.       |
+| 9         | Packing & Shipping      | Packaging chips in trays or reels for delivery to customers.               |
 
-**3. Package Testing**
-  - Conducted in ISO Class 6/7 cleanroom zones
-  - Testing includes:
-    - AOST (Assembly Open and Short Test): Shorts/ Opens in Packages
-    - Burn-in Test: Elevated temperature and voltage and power cycling are applied to accelerate ageing to catch early failures.
-    - Final Test: Validate the electrical performance of the packaged IC across temperature and voltage corners and ensure it meets the datasheet specifications.
 |![AEDT_IcePak_32](./docs/images/M4-L4-2.png) |
 |:---|
 
@@ -687,8 +620,7 @@ Processing Zone (Clean room: ISO class 6 & 7): This area handles initial packagi
 **1. Burn-In Test**
 
   Burn-in testing is a reliability screening process used in semiconductor manufacturing to identify early-life failures in integrated circuits. By subjecting devices to elevated temperatures and voltages for extended periods, this test accelerates aging and stress conditions that mimic real-world usage. The goal is to ensure only robust, defect-free chips move forward in the production pipeline, enhancing long-term performance and reducing field failures.
-  - Burn-in testing is a reliability screening process where semiconductor devices are exposed to elevated temperatures, voltages, and operating conditions for an extended period to accelerate aging and failure mechanisms.
-  - It is used to identify and eliminate early-life failures (also called "infant mortality") in ICs before they are shipped to end users.
+
 
 |![AEDT_IcePak_32](./docs/images/M4-L4-4.png) |
 |:---|
@@ -696,9 +628,7 @@ Processing Zone (Clean room: ISO class 6 & 7): This area handles initial packagi
 **2. Final Test (FT)**
 
    Its purpose is to verify that each integrated circuit (IC) meets all functional and performance specifications before shipment
-  - Final Test is the last major electrical test phase after the semiconductor die has been packaged.
-  - It verifies that the packaged device meets all functional, parametric, and performance specifications before it is shipped to customers.
-  - It is typically performed by OSATs (Outsourced Semiconductor Assembly and Test providers) or in-house test facilities.
+ 
 |![AEDT_IcePak_32](./docs/images/M4-L4-5.png) |
 |:---|
 
@@ -719,20 +649,19 @@ Processing Zone (Clean room: ISO class 6 & 7): This area handles initial packagi
 |![AEDT_IcePak_32](./docs/images/M4-L4-6.png) |
 |:---|
 
-## 5 - Package Design and Modeling: Building a Semiconductor Package from Scratch
+## 5 - Package Design and Modeling:TO BUILD A SEMICONDUCTOR PACKAGE FROM THE BEGINNING
 
-This is a hands-on lab to design a semiconductor wire bond package from scratch using Ansys Electronics Desktop (AEDT). 
 
-### 5.1 - Introduction to Package Cross-Section Modeling in ANSYS Electronics Desktop (AEDT)
+## 5.1 - Introduction to Package Cross-Section Modeling in ANSYS Electronics Desktop (AEDT)
 
-The main focus of this lab exercise is to build the complete cross-section of a wire bond package, including die, substrate, bonding wires, and mold compound, rather than performing any simulation or analyses.
+*This lab activity emphasizes constructing a full structural representation of a wire bond package—comprising the die, substrate, interconnect wires, and encapsulating mold—without engaging in simulation or analytical evaluation.**
 
 |![AEDT_IcePak_32](./docs/images/M5-L5-1.png) |
 |:---|
 
-## 🧱 Package Design and Modeling: Building a Semiconductor Package from Scratch
+##  Package Design and Modeling: Building a Semiconductor Package from Scratch
 
-Designing a semiconductor package from the ground up involves a multi-disciplinary approach that integrates electrical, thermal, and mechanical considerations. The process typically includes:
+*Designing a semiconductor package from the ground up involves a multi-disciplinary approach that integrates electrical, thermal, and mechanical considerations. The process typically includes:*
 
 | **Stage**                  | **Description**                                                                 |
 |---------------------------|---------------------------------------------------------------------------------|
@@ -745,29 +674,26 @@ Designing a semiconductor package from the ground up involves a multi-disciplina
 | Signal Integrity Modeling | Simulate high-speed signal paths to minimize noise and crosstalk.               |
 | Final 3D Package Model    | Generate a complete 3D model for manufacturing and validation.                   |
 
-This modeling phase ensures the package meets performance, reliability, and manufacturability standards before physical prototyping begins.
 
+##  Wire Bond Package Components
 
-**<U>Package Specifications:</U>**
-
-| Component | Properties |
-|:---|:---|
-| 1. Die | <ul> <li>Material : Silicon</li> <li>Dimensions : 3mm x 3mm</li> <li>Die Height : 200 micron</li> </ul> |
-| 2. Substrate | <ul> <li>Material : FR4</li> <li>Dimensions : 5mm x 5mm</li> <li>Height : 500 micron</li> </ul> |
-| 3. Die Attach | <ul> <li>Material : Modified Epoxy</li> <li>Dimensions : 3mm x 3mm</li> <li>Thickness : 100 micron</li> </ul> |
-| 4. Die Bond Pads | <ul> <li>Material : Copper</li> <li>Dimensions : 0.2mm x 0.2mm</li> <li>Thickness : 5 micron</li> </ul> |
-| 5. Substrate Bond Pads | <ul> <li>Material : Copper</li> <li>Dimensions : 0.2mm x 0.2mm</li> <li>Thickness : 10 micron</li> </ul> |
-| 6. Bond Wire | <ul> <li>Material : Gold wire</li> <li>Type: JEDEC 4-point</li> </ul> |
-| 7. Mold Compound | <ul> <li>Material : Epoxy</li> <li>Thickness : 1.2mm</li> </ul> |
-
-  - **Step 1 : Launch AEDT and select Q3D (or Icepak, Maxwell 3D)**
+| Component               | Properties                                                                 |
+|------------------------|----------------------------------------------------------------------------|
+| **1. Die**             | - Material: Silicon - Dimensions: 3mm × 3mm - Die Height: 200 µm    |
+| **2. Substrate**       | - Material: FR4 - Dimensions: 5mm × 5mm - Height: 500 µm            |
+| **3. Die Attach**      | - Material: Modified Epoxy - Dimensions: 3mm × 3mm<br> - Thickness: 100 µm |
+| **4. Die Bond Pads**   | - Material: Copper - Dimensions: 0.2mm × 0.2mm - Thickness: 5 µm    |
+| **5. Substrate Pads**  | - Material: Copper - Dimensions: 0.2mm × 0.2mm - Thickness: 10 µm   |
+| **6. Bond Wire**       | - Material: Gold Wire- Type: JEDEC 4-point                             |
+| **7. Mold Compound**   | - Material: Epoxy
+  - **Step 1 :SELECT AEDT and choose the Q3D (or Icepak, Maxwell 3D)**
 
 ## 🚀 Launching AEDT and Selecting Simulation Modules
 
 | **Step** | **Action**                                      | **Description**                                                                 |
 |----------|--------------------------------------------------|----------------------------------------------------------------------------------|
 | 1        | Open ANSYS Electronics Desktop (AEDT)            | Start the AEDT application from your desktop or start menu.                      |
-| 2        | Create a New Project                             | Go to `File → New → Project` to begin a fresh simulation setup.                 |
+| 2        | Create a New Project                             | Go to File → New → Projec to begin a fresh simulation setup.                 |
 | 3        | Select Desired Module                            | Choose from available solvers:                                                  |
 |          |                                                  | - **Q3D Extractor**: For parasitic extraction and signal integrity analysis.     |
 |          |                                                  | - **Icepak**: For thermal simulation of electronic packages.                     |
@@ -776,20 +702,21 @@ This modeling phase ensures the package meets performance, reliability, and manu
 
 | ![AEDT_IcePak_1](./docs/images/M5-LAB-1.png) |
 |:---|
-### 5.2 - Creating the Die and Substrate in AEDT
+###  Creating the Die and Substrate in AEDT
 
-  - **Step 2 : Define the working unit**
-    - `Modeler -> Units...`
-    - Choose **mm** or **um** as the working unit for creating the model.
+  - **Step 2 : Defining the working unit**
+    -The working unit may consist of a silicon die, substrate, bond wires, die attach material, and mold compound.
+     -It serves as the reference model for design validation, material characterization, and process optimization.
+    - create the working model using **mm** or **um**.
 
-### 🧩 5.2 - Creating the Die and Substrate in AEDT
+###   - Creating the Die and Substrate in AEDT
 
 | **Step** | **Action**                            | **Description**                                                                 |
 |----------|----------------------------------------|----------------------------------------------------------------------------------|
 | 1        | Launch AEDT                            | Open ANSYS Electronics Desktop and start a new project.                          |
 | 2        | Select Simulation Module               | Choose Icepak, Q3D, or Maxwell 3D depending on the analysis type.                |
-| 3        | Set Units                              | Go to `Modeler → Units` and select appropriate units (e.g., mm, µm).             |
-| 4        | Create Substrate Geometry              | Use `Draw → Box` or `Draw → Rectangle` to define the substrate dimensions.       |
+| 3        | Set Units                              | Go to Modeler → Units` and select appropriate units (e.g., mm, µm).             |
+| 4        | Create Substrate Geometry              | Use Draw → Box or Draw → Rectangle` to define the substrate dimensions.       |
 | 5        | Assign Material to Substrate           | Apply materials like FR4, ceramic, or custom definitions via the material library.|
 | 6        | Create Die Geometry                    | Draw a smaller box on top of the substrate to represent the silicon die.         |
 | 7        | Define Die Material                    | Assign silicon or other semiconductor material to the die.                       |
@@ -798,32 +725,38 @@ This modeling phase ensures the package meets performance, reliability, and manu
 
 | ![AEDT_IcePak_1](./docs/images/M5-LAB-2.png) |
 |:---|
-  - **Step 3.1 : Create the Die Geometry**
-    - Select the rectangle tool from the ribbon or using the Menus (`Draw -> Rectangle`) to draw a rectangle
-    - Now, double click on **CreateRectangle** `Model -> Rectangle1` to open up its Properties Dialog box.
-    - Specify the position with one corner at the origin (0, 0, 0) and the dimensions as 3mm x 3mm
-    - Select `Model -> Rectangle1` and from the menu bar: `Modeler -> Surface -> Thicken Sheet...` and set the thickness to 200 microns (0.2mm)
+  - ** : Create the Die Geometry**
+##  Rectangle Creation and Sheet Thickening Steps
 
-  - **Step 3.2 : Assign Material Properties**
-    - Open up the Properties Dialog box either by double clicking on `Model -> Rectangle1`
-    - Rename the geometry to **Die**
-    - Choose **Silicon** as the material from the Material Library.
+| Step No. | Action Description                                                                 | Menu Navigation / Tool Used                        | Parameters / Values            |
+|----------|-------------------------------------------------------------------------------------|----------------------------------------------------|--------------------------------|
+| 1        | Select the rectangle drawing tool                                                  | Draw -> Rectangle` or Ribbon Tool                 | —                              |
+| 2        | Open properties dialog for the created rectangle                                   | Double-click Model -> Rectangle1`                 | —                              |
+| 3        | Set rectangle position and dimensions                                              | In Properties Dialog                               | Origin: (0, 0, 0)<br>Size: 3mm × 3mm |
+| 4        | Thicken the rectangle sheet                                                        | Modeler -> Surface -> Thicken Sheet...`           | Thickness: 200 microns (0.2mm) |
 
+>  Tip: Ensure units are set to millimeters before specifying dimensions to avoid scaling issues.
+
+  - **Step 3.2 : Assigning the  Material Properties**
 | ![AEDT_IcePak_1](./docs/images/M5-LAB-3.png) |
 |:---|
-  - **Step 4.1 : Create the Substrate Geometry**
-    - Draw another rectangle for the substrate (5mm x 5mm) and position (-1, -1, 0) it such that the die is at the center.
-    - Set the thickness as -500 microns (-0.5mm). Note the negative sign so as to have the substrate lie beneath the die.
-    - Adjust the substrate position along Z-axis to account for the die attach thickness. **Adjusted position: (-1, -1, -0.1)**
+  - **Step 4.1 : Creating the Substrate Geometry**
+##  Substrate Definition and Positioning Steps
+
+| Step No. | Task Description                                                                 | Navigation / Tool Used                        | Input Parameters / Notes                     |
+|----------|-----------------------------------------------------------------------------------|-----------------------------------------------|----------------------------------------------|
+| 1        | Initiate drawing of a new rectangle to represent the substrate                   | Use Draw -> Rectangle` from the toolbar      | Dimensions: 5mm × 5mm                         |
+| 2        | Set the initial placement of the substrate rectangle                             | Access via Model -> Rectangle2`              | Coordinates: (-1, -1, 0)                      |
+| 3        | Apply thickness to the substrate geometry                                        | Navigate to Modeler -> Surface -> Thicken Sheet...` | Thickness: -500 microns (-0.5mm)<br>Negative value ensures it lies below the die |
+| 4        | Modify the Z-axis position to include die attach layer offset                   | Update position in the Properties Dialog      | Final Position: (-1, -1, -0.1)                |
+
+>  **Note:** The negative Z-offset accounts for the die attach layer, ensuring proper vertical alignment between die and substrate.
+
 
 ### 5.3 - Adding Die Attach Material and Bond Pads
 
   - **Step 5 : Create the Die Attach Material**
-    - Draw a rectangle of the same size as that of the die (3mm x 3mm) and at the same co-ordinates (0, 0, 0).
-    - Set the thickness to -100 microns (-0.1mm) as the DAM lies beneath the die and the substrate
-    - Assign the material to _**Modified Eopxy**_
-    - **NOTE:** Assign different shades/ colours to adjacent components to easily discern in 3D view.
-
+    
   - **Step 6 : Create Bond pads on Die and Substrate**
   - Draw a small rectangle and configure its size to to that of the die pad (0.2mm x 0.2mm). We will place the first Die Pad at the co-ordinates (0.2, 0.2, 0.2) so that it sits on top of the die and is at one of the edges.
   - Set the thickness to 5 microns (0.005mm)
@@ -833,11 +766,6 @@ This modeling phase ensures the package meets performance, reliability, and manu
 
 ### 5.4 - Wire Bond Creation and Material Assignment
 
-  - **Step 7 : Create Bond Wires**
-    - Use the **Bondwire tool** under: `Draw -> Bondwire`
-    - Connect the centre of the Die Bond pad to the centre of the Substrate Bond Pad. It might be easier to draw the wires from the Top view orientation.
-    - Select the Bondwire type as JEDEC 4-point
-    - Assign gold as the Bondwire material
 
 | **Draw the Bondwire connecting the die & substrate pad centers** <br>![AEDT_IcePak_1](./docs/images/M5-LAB-4.png) |
 |:---|
@@ -858,14 +786,8 @@ Now, repeat the steps 6 and 7 to create and connect all the die and substrate bo
 
 | ![AEDT_IcePak_1](./docs/images/M5-LAB-5.png) |
 |:---|
-### 5.5 - Applying Mold Compound and Finalizing the Package Model
 
-  - **Step 8 : Build the mold compound around the die**
-    - Create a rectangular enclosure around the die and wires (5mm x 5mm, 1.2mm thickness)
-    - Position at (-1, -1, -0.1) covering the top side of the substrate.
-    - Set the thickness to 1.2mm so that it covers the die and the bondwires, while also leaving margin for any laser marking processes
-
-### 🧪 Applying Mold Compound and Finalizing the Package Model
+### Applying Mold Compound and Finalizing the Package Model
 
 | **Step** | **Action**                          | **Description**                                                                 |
 |----------|--------------------------------------|----------------------------------------------------------------------------------|
