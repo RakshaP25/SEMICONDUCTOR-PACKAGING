@@ -758,12 +758,7 @@ Processing Zone (Clean room: ISO class 6 & 7): This area handles initial packagi
   - **Step 5 : Create the Die Attach Material**
     
   - **Step 6 : Create Bond pads on Die and Substrate**
-  - Draw a small rectangle and configure its size to to that of the die pad (0.2mm x 0.2mm). We will place the first Die Pad at the co-ordinates (0.2, 0.2, 0.2) so that it sits on top of the die and is at one of the edges.
-  - Set the thickness to 5 microns (0.005mm)
-  - Similarly, draw a small rectangle and configure its size to to that of the substrate bond pad (0.2mm x 0.2mm).
-  - We will place this Substrate Bind Pad at the co-ordinates (0.2, -0.7, -0.1) so that it sits aligned to the Die bond pad created in the previous step, and also on top of the substrate.
-  - Set the substrate bond pad thickness to 10 microns (0.010mm)
-
+    
 ### 5.4 - Wire Bond Creation and Material Assignment
 
 
